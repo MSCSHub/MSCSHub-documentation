@@ -1,0 +1,1566 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mscshub-documentation documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mscshub-documentation documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CreateReviewComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-review</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./create-review.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-review.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#completedReviews">completedReviews</a>
+                            </li>
+                            <li>
+                                <a href="#cons">cons</a>
+                            </li>
+                            <li>
+                                <a href="#courses">courses</a>
+                            </li>
+                            <li>
+                                <a href="#currentYear">currentYear</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                <a href="#fields">fields</a>
+                            </li>
+                            <li>
+                                <a href="#headerText">headerText</a>
+                            </li>
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                <a href="#pros">pros</a>
+                            </li>
+                            <li>
+                                <a href="#reviewForm">reviewForm</a>
+                            </li>
+                            <li>
+                                <a href="#reviewId">reviewId</a>
+                            </li>
+                            <li>
+                                <a href="#scaleTooltip">scaleTooltip</a>
+                            </li>
+                            <li>
+                                <a href="#semesters">semesters</a>
+                            </li>
+                            <li>
+                                <a href="#submitted">submitted</a>
+                            </li>
+                            <li>
+                                <a href="#userData">userData</a>
+                            </li>
+                            <li>
+                                <a href="#years">years</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getUserReviews">getUserReviews</a>
+                            </li>
+                            <li>
+                                <a href="#initializeReviewForm">initializeReviewForm</a>
+                            </li>
+                            <li>
+                                <a href="#loadReview">loadReview</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#openDialog">openDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#f">f</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(courseService: <a href="../injectables/ClassService.html">ClassService</a>, formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, auth: <a href="../injectables/AuthService.html">AuthService</a>, dialog: MatDialog, afs: AngularFirestore, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>courseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ClassService.html" target="_self" >ClassService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>afs</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFirestore</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserReviews"></a>
+                    <span class="name">
+                        <b>
+                            getUserReviews
+                        </b>
+                        <a href="#getUserReviews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUserReviews()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeReviewForm"></a>
+                    <span class="name">
+                        <b>
+                            initializeReviewForm
+                        </b>
+                        <a href="#initializeReviewForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeReviewForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadReview"></a>
+                    <span class="name">
+                        <b>
+                            loadReview
+                        </b>
+                        <a href="#loadReview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadReview()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialog"></a>
+                    <span class="name">
+                        <b>
+                            openDialog
+                        </b>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="completedReviews"></a>
+                        <span class="name">
+                            <b>
+                            completedReviews</b>
+                            <a href="#completedReviews"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cons"></a>
+                        <span class="name">
+                            <b>
+                            cons</b>
+                            <a href="#cons"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courses"></a>
+                        <span class="name">
+                            <b>
+                            courses</b>
+                            <a href="#courses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ClassData.html" target="_self" >ClassData[] | undefined</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentYear"></a>
+                        <span class="name">
+                            <b>
+                            currentYear</b>
+                            <a href="#currentYear"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(new Date()).getFullYear()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fields"></a>
+                        <span class="name">
+                            <b>
+                            fields</b>
+                            <a href="#fields"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {formName: &quot;workload&quot;, title: &quot;Workload&quot;, min: &quot;1&quot;, max: &quot;50&quot;, hint: &quot;How many hours per week did this class require?&quot;},
+    {formName: &quot;rating&quot;, title: &quot;Rating&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the class overall on a scale of 1-7&quot;},
+    {formName: &quot;difficulty&quot;, title: &quot;Difficulty&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;How difficult was this class on a scale of 1-7? 1 &#x3D; Easiest, 7 &#x3D; Hardest&quot;},
+    {formName: &quot;bookUsefulness&quot;, title: &quot;Textbook Usefulness&quot;, min: &quot;0&quot;, max: &quot;7&quot;, hint: &quot;How usefull was the textbook on a scale of 1-7? Use 0 if there was no textbook.&quot;},
+    {formName: &quot;lectureQuality&quot;, title: &quot;Lecture Quality&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the quality of the lectures on a scale of 1-7&quot;},
+    {formName: &quot;professorQuality&quot;, title: &quot;Professor Quality&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the aggregate quality of the professor(s) on a scale of 1-7&quot;},
+    {formName: &quot;piazzaCommunity&quot;, title: &quot;Piazza Support&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate your experience with piazza community for this class on a scale of 1-7&quot;},
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerText"></a>
+                        <span class="name">
+                            <b>
+                            headerText</b>
+                            <a href="#headerText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;Create New Review&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pros"></a>
+                        <span class="name">
+                            <b>
+                            pros</b>
+                            <a href="#pros"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;test&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reviewForm"></a>
+                        <span class="name">
+                            <b>
+                            reviewForm</b>
+                            <a href="#reviewForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormGroup({})</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reviewId"></a>
+                        <span class="name">
+                            <b>
+                            reviewId</b>
+                            <a href="#reviewId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scaleTooltip"></a>
+                        <span class="name">
+                            <b>
+                            scaleTooltip</b>
+                            <a href="#scaleTooltip"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x60;
+    You know how people say: &quot;on a scale of 1-10&quot;?\n
+    I&#x27;ve used the principle of Millers law to start asking people to measure on a scale of 1-7.\n
+    Universally, people balk at the scale. But I explain to them that most people can&#x27;t tell the difference between 2 and 3 or a 6 and 7 on a ten point scale. If you can&#x27;t articulate a difference, there&#x27;s no use in the measurement.\n
+    Seven is great because you get more than the simplicity of 1-5 and can be a better reflection of your true evaluation.
+  &#x60;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="semesters"></a>
+                        <span class="name">
+                            <b>
+                            semesters</b>
+                            <a href="#semesters"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;Spring&quot;, &quot;Summer&quot;, &quot;Fall&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitted"></a>
+                        <span class="name">
+                            <b>
+                            submitted</b>
+                            <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userData"></a>
+                        <span class="name">
+                            <b>
+                            userData</b>
+                            <a href="#userData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>FbUser | undefined</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="years"></a>
+                        <span class="name">
+                            <b>
+                            years</b>
+                            <a href="#years"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[this.currentYear, this.currentYear-1, this.currentYear-2]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name"><b>f</b><a href="#f"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>f()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/create-review/create-review.component.ts:125</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
+import { ClassService } from &#x27;src/app/services/classes/class.service&#x27;;
+import { ClassData } from &#x27;src/app/shared/class/class&#x27;;
+import { Review } from &#x27;src/app/shared/review/review&#x27;;
+import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
+
+@Component({
+  selector: &#x27;dialog-review-sumission-dialog&#x27;,
+  templateUrl: &#x27;dialog-review-submission-dialog.html&#x27;,
+})
+export class DialogReviewSubmission {}
+
+@Component({
+  selector: &#x27;app-create-review&#x27;,
+  templateUrl: &#x27;./create-review.component.html&#x27;,
+  styleUrls: [&#x27;./create-review.component.scss&#x27;]
+})
+export class CreateReviewComponent implements OnInit {
+  headerText: string &#x3D; &quot;Create New Review&quot;
+  reviewId: string &#x3D; &quot;&quot;
+  error: any
+  loading: boolean &#x3D; false
+  submitted: boolean &#x3D; false
+  pros: string[] &#x3D; [&quot;test&quot;]
+  cons: string[] &#x3D; []
+  semesters: string[] &#x3D; [&quot;Spring&quot;, &quot;Summer&quot;, &quot;Fall&quot;]
+  currentYear: number &#x3D; (new Date()).getFullYear()
+  years: number[] &#x3D; [this.currentYear, this.currentYear-1, this.currentYear-2]
+  courses: ClassData[] | undefined
+  reviewForm: FormGroup &#x3D; new FormGroup({})
+  completedReviews: string[] &#x3D; []
+  userData: FbUser | undefined
+  scaleTooltip &#x3D; &#x60;
+    You know how people say: &quot;on a scale of 1-10&quot;?\n
+    I&#x27;ve used the principle of Millers law to start asking people to measure on a scale of 1-7.\n
+    Universally, people balk at the scale. But I explain to them that most people can&#x27;t tell the difference between 2 and 3 or a 6 and 7 on a ten point scale. If you can&#x27;t articulate a difference, there&#x27;s no use in the measurement.\n
+    Seven is great because you get more than the simplicity of 1-5 and can be a better reflection of your true evaluation.
+  &#x60;
+  fields &#x3D; [
+    {formName: &quot;workload&quot;, title: &quot;Workload&quot;, min: &quot;1&quot;, max: &quot;50&quot;, hint: &quot;How many hours per week did this class require?&quot;},
+    {formName: &quot;rating&quot;, title: &quot;Rating&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the class overall on a scale of 1-7&quot;},
+    {formName: &quot;difficulty&quot;, title: &quot;Difficulty&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;How difficult was this class on a scale of 1-7? 1 &#x3D; Easiest, 7 &#x3D; Hardest&quot;},
+    {formName: &quot;bookUsefulness&quot;, title: &quot;Textbook Usefulness&quot;, min: &quot;0&quot;, max: &quot;7&quot;, hint: &quot;How usefull was the textbook on a scale of 1-7? Use 0 if there was no textbook.&quot;},
+    {formName: &quot;lectureQuality&quot;, title: &quot;Lecture Quality&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the quality of the lectures on a scale of 1-7&quot;},
+    {formName: &quot;professorQuality&quot;, title: &quot;Professor Quality&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate the aggregate quality of the professor(s) on a scale of 1-7&quot;},
+    {formName: &quot;piazzaCommunity&quot;, title: &quot;Piazza Support&quot;, min: &quot;1&quot;, max: &quot;7&quot;, hint: &quot;Rate your experience with piazza community for this class on a scale of 1-7&quot;},
+  ]
+  
+  constructor(
+    private courseService: ClassService,
+    private formBuilder: FormBuilder,
+    private auth: AuthService,
+    public dialog: MatDialog,
+    private afs: AngularFirestore,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
+
+  ngOnInit(): void {
+    this.reviewId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || &quot;&quot;
+    this.courseService.classes.subscribe(data &#x3D;&gt; {
+      this.courses &#x3D; data
+      this.courses.sort((a,b) &#x3D;&gt; (a.ClassName &gt; b.ClassName) ? 1 : -1)
+    })
+    this.auth.userData.subscribe(data &#x3D;&gt; {
+      this.userData &#x3D; data
+      this.getUserReviews()
+    })
+    this.initializeReviewForm()
+    this.loadReview()
+  }
+
+  loadReview() {
+    if(this.reviewId){
+      this.headerText &#x3D; &quot;Edit Review&quot;
+      this.afs.collection(&quot;Reviews&quot;).doc(this.reviewId).get().subscribe(doc &#x3D;&gt; {
+        this.reviewForm.setValue(doc.data() as Review)
+      })
+      this.f.course.disable()
+    }
+  }
+
+  getUserReviews(): void {
+    this.afs.collection(&#x27;Reviews&#x27;, ref &#x3D;&gt; 
+      ref.where(&quot;userId&quot;, &#x27;&#x3D;&#x3D;&#x27;, this.userData?.uid)
+    ).get().subscribe(response &#x3D;&gt; {
+      if (!response.docs.length) return
+      this.completedReviews &#x3D; []
+      for (let item of response.docs) {
+        const review &#x3D; item.data() as Review
+        this.completedReviews.push(review.course)
+      }
+    }, error &#x3D;&gt; {console.error(&quot;Create Review:&quot;, error)})
+  }
+
+  initializeReviewForm() {
+    this.reviewForm &#x3D; this.formBuilder.group({
+      title: [&#x27;&#x27;, Validators.required],
+      course: [&#x27;&#x27;, Validators.required],
+      semester: [&#x27;&#x27;, Validators.required],
+      year: [&#x27;&#x27;, [Validators.required, Validators.max(2099), Validators.min(2019)]],
+      review: [&#x27;Pros:\n1. \n2. \n3. \n\nCons:\n1. \n2. \n3. \n\nDetailed Review:\n&#x27;, Validators.required],
+      rating: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(1)]],
+      difficulty: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(1)]],
+      workload: [&#x27;&#x27;, [Validators.required, Validators.max(100), Validators.min(1)]],
+      bookUsefulness: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(0)]],
+      lectureQuality: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(1)]],
+      professorQuality: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(1)]],
+      piazzaCommunity: [&#x27;&#x27;, [Validators.required, Validators.max(7), Validators.min(1)]],
+      userId: [&#x27;&#x27;, Validators.required],
+      timestamp: [new Date(), Validators.required],
+      classId: [&#x27;&#x27;, Validators.required]
+    })
+    this.reviewForm.controls[&#x27;timestamp&#x27;].setValue(new Date())
+    this.auth.userData.subscribe(user &#x3D;&gt; {
+      this.reviewForm.controls[&#x27;userId&#x27;].setValue(user.uid)
+    })
+  }
+
+  get f() {
+    return this.reviewForm?.controls
+  }
+
+  onSubmit() {
+    const courseName &#x3D; this.reviewForm.controls[&#x27;course&#x27;].value
+    const classId &#x3D; this.courses?.find(item &#x3D;&gt; item.ClassName &#x3D;&#x3D;&#x3D; courseName)?.courseId
+    this.reviewForm.controls[&#x27;classId&#x27;].setValue(classId)
+    this.submitted &#x3D; true
+    if(this.reviewForm?.invalid){
+      this.error &#x3D; this.reviewForm.errors
+      return
+    }
+    this.loading &#x3D; true
+    if(this.reviewId) {
+      this.afs.collection(&#x27;Reviews&#x27;)
+        .doc(this.reviewId)
+        .update(this.reviewForm.value)
+        .then(result &#x3D;&gt; {
+          this.loading &#x3D; false
+          this.openDialog()
+        }, error &#x3D;&gt; {
+          console.error(&quot;Create Review: Submission failed - &quot;, error)
+          this.loading &#x3D; false
+          this.error &#x3D; error.message
+        })
+    } else {
+      this.afs.collection(&#x27;Reviews&#x27;)
+        .add(this.reviewForm.value)
+        .then(result &#x3D;&gt; {
+          this.loading &#x3D; false
+          this.openDialog()
+        }, error &#x3D;&gt; {
+          console.error(&quot;Create Review: Submission failed -&quot;, error)
+          this.loading &#x3D; false
+          this.error &#x3D; error.message
+        })
+    }
+  }
+
+  openDialog() {
+    const dialogRef &#x3D; this.dialog.open(DialogReviewSubmission)
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      this.router.navigate([&#x27;courses&#x27;, this.reviewForm.controls[&#x27;course&#x27;].value])
+    })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;login-wrapper&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    &lt;mat-card class&#x3D;&quot;box&quot;&gt;
+        &lt;mat-card-header&gt;
+            &lt;mat-card-title&gt;{{headerText}}&lt;/mat-card-title&gt;
+            &lt;p&gt;
+                Share what your experience was in your classes.
+                To help structure your reviews, try listing what
+                you liked (pros), what you disliked (cons), and
+                then talk about your experience in the class overall.
+            &lt;/p&gt;
+        &lt;/mat-card-header&gt;
+
+        &lt;form class&#x3D;&quot;login-form&quot; [formGroup]&#x3D;&quot;reviewForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;&gt;
+            &lt;mat-card-content&gt;                
+                &lt;mat-form-field class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;mat-label&gt;Course&lt;/mat-label&gt;
+                    &lt;mat-select formControlName&#x3D;&quot;course&quot; required&gt;
+                        &lt;div *ngFor&#x3D;&quot;let course of courses&quot;&gt;
+                            &lt;mat-option *ngIf&#x3D;&quot;reviewId || !completedReviews.includes(course.ClassName)&quot;
+                                [value]&#x3D;&quot;course.ClassName&quot;&gt;
+                                {{course.ClassName}}
+                            &lt;/mat-option&gt;
+                        &lt;/div&gt;
+                    &lt;/mat-select&gt;
+                &lt;/mat-form-field&gt;
+
+                &lt;mat-form-field class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;mat-label&gt;Semester&lt;/mat-label&gt;
+                    &lt;mat-select formControlName&#x3D;&quot;semester&quot; required&gt;
+                        &lt;mat-option *ngFor&#x3D;&quot;let semester of semesters&quot; [value]&#x3D;&quot;semester&quot;&gt;
+                            {{semester}}
+                        &lt;/mat-option&gt;
+                    &lt;/mat-select&gt;
+                &lt;/mat-form-field&gt;
+
+                &lt;mat-form-field class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;mat-label&gt;Year&lt;/mat-label&gt;
+                    &lt;mat-select formControlName&#x3D;&quot;year&quot; required [ngClass]&#x3D;&quot;{&#x27;is-invalid&#x27;: submitted}&quot;&gt;
+                        &lt;mat-option *ngFor&#x3D;&quot;let year of years&quot; [value]&#x3D;&quot;year&quot;&gt;
+                            {{year}}
+                        &lt;/mat-option&gt;
+                    &lt;/mat-select&gt;
+                &lt;/mat-form-field&gt;
+
+                &lt;mat-form-field class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;input matInput placeholder&#x3D;&quot;Review Title&quot; formControlName&#x3D;&quot;title&quot; 
+                           required [ngClass]&#x3D;&quot;{&#x27;is-invalid&#x27;: submitted}&quot;&gt;
+                &lt;/mat-form-field&gt;
+
+                &lt;mat-form-field class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;textarea matInput type&#x3D;&quot;textarea&quot; rows&#x3D;&quot;20&quot;
+                           formControlName&#x3D;&quot;review&quot; required
+                           [ngClass]&#x3D;&quot;{&#x27;is-invalid&#x27;: submitted}&quot;
+                           placeholder&#x3D;&quot;Review&quot;&gt;&lt;/textarea&gt;
+                &lt;/mat-form-field&gt;
+
+                &lt;div class&#x3D;&quot;review-spacer&quot;&gt;
+                    &lt;h2&gt;Course Ratings&lt;/h2&gt;
+                    &lt;h3&gt;
+                        Please rate the following on a scale of 1-7&amp;nbsp;&amp;nbsp;&amp;nbsp;
+                        &lt;mat-icon #tooltip&#x3D;&quot;matTooltip&quot; (click)&#x3D;&quot;tooltip.show()&quot; matTooltip&#x3D;&quot;{{scaleTooltip}}&quot; [matTooltipClass]&#x3D;&quot;&#x27;multiline-tooltip&#x27;&quot;&gt;info_outline&lt;/mat-icon&gt;
+                    &lt;/h3&gt;
+                    &lt;p&gt;1 - The Worst, 2 - Bad, 3 - Below Average, 4 - Average, 5 - Above Average, 6 - Good, 7 - The Best&lt;/p&gt;
+                    &lt;p&gt;Difficulty Rating: 1 - Easiest Thing Ever, 7 - Makes You Want To Cry&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;mat-form-field *ngFor&#x3D;&quot;let field of fields&quot; class&#x3D;&quot;form-field-full-width&quot;&gt;
+                    &lt;input matInput type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;{{ field.title }}&quot;
+                           required max&#x3D;&quot;{{ field.max }}&quot; min&#x3D;&quot;{{ field.min }}&quot;
+                            formControlName&#x3D;&quot;{{ field.formName }}&quot;&gt;
+                    &lt;mat-hint&gt;{{ field.hint }}&lt;/mat-hint&gt;
+                &lt;/mat-form-field&gt;
+                &lt;!-- In case you ever want to use a slider for input, here&#x27;s a good starting point
+                &lt;div class&#x3D;&quot;review-slider-container&quot;&gt;
+                    &lt;mat-label class&#x3D;&quot;review-label&quot;&gt;Difficulty:&lt;/mat-label&gt;
+                    &lt;mat-slider fxFlex class&#x3D;&quot;review-slider&quot; [formControl]&#x3D;&quot;rating&quot; [max]&#x3D;&quot;7&quot; [min]&#x3D;&quot;0&quot; [thumbLabel]&#x3D;&quot;true&quot; [tickInterval]&#x3D;&quot;1&quot;&gt;&lt;/mat-slider&gt;
+                &lt;/div&gt; --&gt;
+            &lt;/mat-card-content&gt;
+            &lt;button [disabled]&#x3D;&quot;loading&quot; mat-raised-button color&#x3D;&quot;primary&quot; class&#x3D;&quot;btn-block&quot;&gt;
+                &lt;span *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;spinner-border spinner-border-sm mr-1&quot;&gt;&lt;/span&gt;
+                Submit
+            &lt;/button&gt;
+            &lt;div *ngIf&#x3D;&quot;error&quot; class&#x3D;&quot;alert alert-danger mt-3 mb-0&quot;&gt;{{error}}&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/mat-card&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./create-review.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.mat-card {
+    max-width: 800px;
+}
+
+.review-spacer {
+    text-align: center;
+    padding-top: 15px;
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
+}
+::ng-deep .mat-tooltip  {
+    white-space: pre-line !important;
+}
+
+// .review-slider-container {
+//     align-items: center;
+//     // flex-wrap: wrap;
+// }
+
+// .review-label {
+//     min-width: 100px;
+// }
+
+// .review-slider {
+//     // min-width: 300px;
+// }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">    <mat-card class="box">        <mat-card-header>            <mat-card-title>{{headerText}}</mat-card-title>            <p>                Share what your experience was in your classes.                To help structure your reviews, try listing what                you liked (pros), what you disliked (cons), and                then talk about your experience in the class overall.            </p>        </mat-card-header>        <form class="login-form" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">            <mat-card-content>                                <mat-form-field class="form-field-full-width">                    <mat-label>Course</mat-label>                    <mat-select formControlName="course" required>                        <div *ngFor="let course of courses">                            <mat-option *ngIf="reviewId || !completedReviews.includes(course.ClassName)"                                [value]="course.ClassName">                                {{course.ClassName}}                            </mat-option>                        </div>                    </mat-select>                </mat-form-field>                <mat-form-field class="form-field-full-width">                    <mat-label>Semester</mat-label>                    <mat-select formControlName="semester" required>                        <mat-option *ngFor="let semester of semesters" [value]="semester">                            {{semester}}                        </mat-option>                    </mat-select>                </mat-form-field>                <mat-form-field class="form-field-full-width">                    <mat-label>Year</mat-label>                    <mat-select formControlName="year" required [ngClass]="{\'is-invalid\': submitted}">                        <mat-option *ngFor="let year of years" [value]="year">                            {{year}}                        </mat-option>                    </mat-select>                </mat-form-field>                <mat-form-field class="form-field-full-width">                    <input matInput placeholder="Review Title" formControlName="title"                            required [ngClass]="{\'is-invalid\': submitted}">                </mat-form-field>                <mat-form-field class="form-field-full-width">                    <textarea matInput type="textarea" rows="20"                           formControlName="review" required                           [ngClass]="{\'is-invalid\': submitted}"                           placeholder="Review"></textarea>                </mat-form-field>                <div class="review-spacer">                    <h2>Course Ratings</h2>                    <h3>                        Please rate the following on a scale of 1-7&nbsp;&nbsp;&nbsp;                        <mat-icon #tooltip="matTooltip" (click)="tooltip.show()" matTooltip="{{scaleTooltip}}" [matTooltipClass]="\'multiline-tooltip\'">info_outline</mat-icon>                    </h3>                    <p>1 - The Worst, 2 - Bad, 3 - Below Average, 4 - Average, 5 - Above Average, 6 - Good, 7 - The Best</p>                    <p>Difficulty Rating: 1 - Easiest Thing Ever, 7 - Makes You Want To Cry</p>                </div>                <mat-form-field *ngFor="let field of fields" class="form-field-full-width">                    <input matInput type="number" placeholder="{{ field.title }}"                           required max="{{ field.max }}" min="{{ field.min }}"                            formControlName="{{ field.formName }}">                    <mat-hint>{{ field.hint }}</mat-hint>                </mat-form-field>                <!-- In case you ever want to use a slider for input, here\'s a good starting point                <div class="review-slider-container">                    <mat-label class="review-label">Difficulty:</mat-label>                    <mat-slider fxFlex class="review-slider" [formControl]="rating" [max]="7" [min]="0" [thumbLabel]="true" [tickInterval]="1"></mat-slider>                </div> -->            </mat-card-content>            <button [disabled]="loading" mat-raised-button color="primary" class="btn-block">                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>                Submit            </button>            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>        </form>    </mat-card></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CourseCardComponent', 'selector': 'app-course-card'},{'name': 'CourseDetailComponent', 'selector': 'app-course-detail'},{'name': 'CourseGridCardComponent', 'selector': 'app-course-grid-card'},{'name': 'CourseGridComponent', 'selector': 'app-course-grid'},{'name': 'CourseListComponent', 'selector': 'app-course-list'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CreateReviewComponent', 'selector': 'app-create-review'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DialogNotLoggedIn', 'selector': 'dialog-not-logged-in-dialog'},{'name': 'DialogNotVerified', 'selector': 'dialog-not-verified-dialog'},{'name': 'DialogOnDelete', 'selector': 'dialog-on-delete-dialog'},{'name': 'DialogReviewSubmission', 'selector': 'dialog-review-sumission-dialog'},{'name': 'DialogSendFeedback', 'selector': 'dialog-send-feedback-dialog'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'EditCourseMetadataComponent', 'selector': 'app-edit-course-metadata'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MenuComponent', 'selector': 'app-nav-nodes'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NothingHereComponent', 'selector': 'app-nothing-here'},{'name': 'PandaPartyComponent', 'selector': 'app-panda-party'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ReviewDetailComponent', 'selector': 'app-review-detail'},{'name': 'ReviewHelpfulnessComponent', 'selector': 'app-review-helpfulness'},{'name': 'ReviewsComponent', 'selector': 'app-reviews'},{'name': 'SadPandaComponent', 'selector': 'app-sad-panda'},{'name': 'SearchInputComponent', 'selector': 'app-search-input'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'StarRatingComponent', 'selector': 'app-star-rating'},{'name': 'ThankyouComponent', 'selector': 'app-thankyou'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'},{'name': 'ViewUserReviewsComponent', 'selector': 'app-view-user-reviews'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CreateReviewComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateReviewComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
