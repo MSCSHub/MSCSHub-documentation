@@ -1,8 +1,0 @@
-{
-    "include": ["../MSCSHub/src/**/*.ts"],
-    "exclude": [
-        "../MSCSHub/src/test.ts", 
-        "../MSCSHub/src/**/*.spec.ts", 
-        //"../MSCSHub/src/app/file-to-exclude.ts"
-    ]
-  }
