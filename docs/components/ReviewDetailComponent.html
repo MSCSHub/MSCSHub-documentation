@@ -1,0 +1,1417 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mscshub-documentation documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mscshub-documentation documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ReviewDetailComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-review-detail</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./review-detail.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./review-detail.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#durationInSeconds">durationInSeconds</a>
+                            </li>
+                            <li>
+                                <a href="#isLoggedIn">isLoggedIn</a>
+                            </li>
+                            <li>
+                                <a href="#pageSizeOptions">pageSizeOptions</a>
+                            </li>
+                            <li>
+                                <a href="#userData">userData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getFeedbackValue">getFeedbackValue</a>
+                            </li>
+                            <li>
+                                <a href="#getSingleReview">getSingleReview</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openDialog">openDialog</a>
+                            </li>
+                            <li>
+                                <a href="#openSnackBar">openSnackBar</a>
+                            </li>
+                            <li>
+                                <a href="#removeReview">removeReview</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#author">author</a>
+                            </li>
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                            <li>
+                                <a href="#dataLength">dataLength</a>
+                            </li>
+                            <li>
+                                <a href="#pageLength">pageLength</a>
+                            </li>
+                            <li>
+                                <a href="#pageNumber">pageNumber</a>
+                            </li>
+                            <li>
+                                <a href="#query">query</a>
+                            </li>
+                            <li>
+                                <a href="#reviewData">reviewData</a>
+                            </li>
+                            <li>
+                                <a href="#reviewId">reviewId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, afs: AngularFirestore, auth: <a href="../injectables/AuthService.html">AuthService</a>, _snackBar: MatSnackBar, clipboard: Clipboard, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>afs</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFirestore</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>clipboard</td>
+                                                  
+                                                        <td>
+                                                                    <code>Clipboard</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="author"></a>
+                        <b>author</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <b>class</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:26</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataLength"></a>
+                        <b>dataLength</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:31</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageLength"></a>
+                        <b>pageLength</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>5</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:29</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageNumber"></a>
+                        <b>pageNumber</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:27</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <b>query</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:28</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reviewData"></a>
+                        <b>reviewData</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Review.html" target="_self" >Review[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reviewId"></a>
+                        <b>reviewId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFeedbackValue"></a>
+                    <span class="name">
+                        <b>
+                            getFeedbackValue
+                        </b>
+                        <a href="#getFeedbackValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFeedbackValue(reviewId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reviewId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSingleReview"></a>
+                    <span class="name">
+                        <b>
+                            getSingleReview
+                        </b>
+                        <a href="#getSingleReview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSingleReview(reviewId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reviewId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialog"></a>
+                    <span class="name">
+                        <b>
+                            openDialog
+                        </b>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDialog(reviewId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reviewId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            openSnackBar
+                        </b>
+                        <a href="#openSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, reviewId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>reviewId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;Dismiss&quot;</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeReview"></a>
+                    <span class="name">
+                        <b>
+                            removeReview
+                        </b>
+                        <a href="#removeReview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeReview(reviewId: string | undefined)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>reviewId</td>
+                                    <td>
+                                            <code>string | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="durationInSeconds"></a>
+                        <span class="name">
+                            <b>
+                            durationInSeconds</b>
+                            <a href="#durationInSeconds"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>3</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoggedIn"></a>
+                        <span class="name">
+                            <b>
+                            isLoggedIn</b>
+                            <a href="#isLoggedIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageSizeOptions"></a>
+                        <span class="name">
+                            <b>
+                            pageSizeOptions</b>
+                            <a href="#pageSizeOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[5, 10, 25, 100]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userData"></a>
+                        <span class="name">
+                            <b>
+                            userData</b>
+                            <a href="#userData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>FbUser | undefined</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
+import { Review } from &#x27;src/app/shared/review/review&#x27;;
+import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
+import {Clipboard} from &#x27;@angular/cdk/clipboard&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+
+
+@Component({
+  selector: &#x27;dialog-on-delete-dialog&#x27;,
+  templateUrl: &#x27;dialog-on-delete-dialog.html&#x27;,
+})
+export class DialogOnDelete {}
+
+@Component({
+  selector: &#x27;app-review-detail&#x27;,
+  templateUrl: &#x27;./review-detail.component.html&#x27;,
+  styleUrls: [&#x27;./review-detail.component.scss&#x27;]
+})
+export class ReviewDetailComponent implements OnInit {
+  @Input() reviewId: string &#x3D; &quot;&quot;
+  @Input() author: string &#x3D; &quot;&quot;
+  @Input() class: string &#x3D; &quot;&quot;
+  @Input() pageNumber: number &#x3D; 0
+  @Input() query: string &#x3D; &quot;&quot;
+  @Input() pageLength: number &#x3D; 5
+  @Input() reviewData: Review[] &#x3D; []
+  @Input() dataLength: number &#x3D; 0
+  isLoggedIn: boolean &#x3D; false
+  userData: FbUser | undefined
+  durationInSeconds: number &#x3D; 3
+  pageSizeOptions: number[] &#x3D; [5, 10, 25, 100]
+
+  constructor(
+    private route: ActivatedRoute,
+    private afs: AngularFirestore,
+    private auth: AuthService,
+    private _snackBar: MatSnackBar,
+    private clipboard: Clipboard,
+    public dialog: MatDialog,
+  ) { }
+
+  ngOnInit(): void {
+    this.auth.isLoggedIn.subscribe(status &#x3D;&gt; {this.isLoggedIn &#x3D; status})
+    this.auth.userData.subscribe(data &#x3D;&gt; {
+      this.userData &#x3D; data
+    })
+    this.reviewId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || this.reviewId
+    if(this.reviewId !&#x3D; &quot;&quot;){this.getSingleReview(this.reviewId)}
+  }
+
+  getSingleReview(reviewId: string) {
+    this.afs.collection(&quot;Reviews&quot;).doc(reviewId).get().subscribe(doc &#x3D;&gt; {
+      const review &#x3D; doc.data() as Review
+      review.reviewId &#x3D; doc.id
+      this.reviewData.push(review)
+    })
+  }
+
+  openSnackBar(message: string, reviewId?: string, action: string &#x3D; &quot;Dismiss&quot;) {
+    this.clipboard.copy(&#x60;${window.location.host}/review/${reviewId}&#x60;)
+    this._snackBar.open(message, action, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+
+  removeReview(reviewId: string | undefined): void {
+    if(!reviewId) return
+    this.openDialog(reviewId)
+  }
+
+  openDialog(reviewId: string) {
+    const dialogRef &#x3D; this.dialog.open(DialogOnDelete)
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if(result) {
+        this.afs.collection(&quot;Reviews&quot;).doc(reviewId).delete()
+        let index &#x3D;  this.reviewData.findIndex(x &#x3D;&gt; x.reviewId&#x3D;&#x3D;reviewId)
+        this.reviewData.splice(index, 1)
+      }
+    })
+  }
+
+  getFeedbackValue(reviewId: string): string[] {
+    if(!this.userData?.reviewFeedback) return [&quot;&quot;]
+    if(reviewId in this.userData?.reviewFeedback!) {
+      let feedback &#x3D; this.userData?.reviewFeedback![reviewId]
+      if(feedback) return [&quot;yes&quot;]
+      else return [&quot;no&quot;]
+    }
+    return [&quot;&quot;]
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content&quot;&gt;
+  &lt;div class&#x3D;&quot;review-container&quot;&gt;
+    &lt;mat-card *ngFor&#x3D;&quot;let review of reviewData | slice:pageNumber*pageLength:(pageNumber+1)*pageLength&quot;&gt;
+      &lt;mat-card-header&gt;
+        &lt;mat-card-title&gt;{{review.title}}&lt;/mat-card-title&gt;
+        &lt;mat-card-subtitle&gt;{{review.course}}&lt;/mat-card-subtitle&gt;
+        &lt;mat-card-subtitle&gt;{{review.timestamp.toMillis() | date: &#x27;M/d/yyyy h:mm a z&#x27;}}&lt;/mat-card-subtitle&gt;
+        &lt;div fxFlex&gt;&lt;/div&gt;
+        &lt;button mat-icon-button (click)&#x3D;&quot;openSnackBar(&#x27;Link copied to clipboard.&#x27;, review.reviewId)&quot;&gt;
+          &lt;mat-icon matTooltip&#x3D;&quot;Copy link to review&quot;&gt;add_link&lt;/mat-icon&gt;
+        &lt;/button&gt;
+        &lt;div *ngIf&#x3D;&quot;review.userId &#x3D;&#x3D;&#x3D; userData?.uid&quot;&gt;
+          &lt;button mat-icon-button routerLink&#x3D;&quot;/review/edit/{{review.reviewId}}&quot;&gt;
+            &lt;mat-icon matTooltip&#x3D;&quot;Edit review&quot;&gt;mode_edit&lt;/mat-icon&gt;
+          &lt;/button&gt;
+          &lt;button mat-icon-button (click)&#x3D;&quot;removeReview(review.reviewId)&quot;&gt;
+            &lt;mat-icon matTooltip&#x3D;&quot;Edit review&quot;&gt;delete&lt;/mat-icon&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/mat-card-header&gt;
+      &lt;mat-card-content&gt;
+        &lt;div class&#x3D;&quot;rating-grid&quot;&gt;
+          &lt;span&gt;Rating: {{review.rating}}&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.rating&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Difficulty: {{review.difficulty}}&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.difficulty&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Textbook: &lt;span *ngIf&#x3D;&quot;review.bookUsefulness&gt;0&quot;&gt;{{review.bookUsefulness}}&lt;/span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.bookUsefulness&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Lectures: &lt;span *ngIf&#x3D;&quot;review.lectureQuality&gt;0&quot;&gt;{{review.lectureQuality}}&lt;/span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.lectureQuality&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Professor: &lt;span *ngIf&#x3D;&quot;review.professorQuality&gt;0&quot;&gt;{{review.professorQuality}}&lt;/span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.professorQuality&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Piazza: &lt;span *ngIf&#x3D;&quot;review.piazzaCommunity&gt;0&quot;&gt;{{review.piazzaCommunity}}&lt;/span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;app-star-rating [selectedValue]&#x3D;&quot;review.piazzaCommunity&quot;&gt;&lt;/app-star-rating&gt;&lt;/span&gt;
+          &lt;span&gt;Workload:&lt;/span&gt;&lt;span&gt;{{review.workload}} hours per week&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;b&gt;Review:&lt;/b&gt;&lt;br&gt;
+          &lt;p style&#x3D;&quot;white-space: pre-line;&quot;&gt;{{review.review}}&lt;/p&gt;
+        &lt;br&gt;&lt;br&gt;
+      Was this review helpful?
+      &lt;app-review-helpfulness [isLoggedIn]&#x3D;&quot;isLoggedIn&quot; [reviewId]&#x3D;&quot;review.reviewId&quot; [value]&#x3D;&quot;getFeedbackValue(review.reviewId!)&quot;&gt;&lt;/app-review-helpfulness&gt;
+    &lt;/mat-card-content&gt;
+    &lt;/mat-card&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./review-detail.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.content {
+  color: #545454;
+  font-family: &quot;Libre Franklin&quot;, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 0;
+  justify-content: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.mat-card {
+  margin: 10px 0px;
+}
+
+.mat-card-content{
+  margin: 0px 16px 50px 16px;
+}
+
+.rating-grid {
+  display: grid;
+  @media (min-width: 575px) {
+    grid-template-columns: 100px 150px 100px 150px;
+    grid-auto-rows: 30px;
+  }
+  @media (max-width: 575px) {
+    grid-template-columns: 150px 150px;
+    grid-auto-rows: 30px;
+  }
+  padding-top: 10px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="content">  <div class="review-container">    <mat-card *ngFor="let review of reviewData | slice:pageNumber*pageLength:(pageNumber+1)*pageLength">      <mat-card-header>        <mat-card-title>{{review.title}}</mat-card-title>        <mat-card-subtitle>{{review.course}}</mat-card-subtitle>        <mat-card-subtitle>{{review.timestamp.toMillis() | date: \'M/d/yyyy h:mm a z\'}}</mat-card-subtitle>        <div fxFlex></div>        <button mat-icon-button (click)="openSnackBar(\'Link copied to clipboard.\', review.reviewId)">          <mat-icon matTooltip="Copy link to review">add_link</mat-icon>        </button>        <div *ngIf="review.userId === userData?.uid">          <button mat-icon-button routerLink="/review/edit/{{review.reviewId}}">            <mat-icon matTooltip="Edit review">mode_edit</mat-icon>          </button>          <button mat-icon-button (click)="removeReview(review.reviewId)">            <mat-icon matTooltip="Edit review">delete</mat-icon>          </button>        </div>      </mat-card-header>      <mat-card-content>        <div class="rating-grid">          <span>Rating: {{review.rating}}</span>          <span><app-star-rating [selectedValue]="review.rating"></app-star-rating></span>          <span>Difficulty: {{review.difficulty}}</span>          <span><app-star-rating [selectedValue]="review.difficulty"></app-star-rating></span>          <span>Textbook: <span *ngIf="review.bookUsefulness>0">{{review.bookUsefulness}}</span></span>          <span><app-star-rating [selectedValue]="review.bookUsefulness"></app-star-rating></span>          <span>Lectures: <span *ngIf="review.lectureQuality>0">{{review.lectureQuality}}</span></span>          <span><app-star-rating [selectedValue]="review.lectureQuality"></app-star-rating></span>          <span>Professor: <span *ngIf="review.professorQuality>0">{{review.professorQuality}}</span></span>          <span><app-star-rating [selectedValue]="review.professorQuality"></app-star-rating></span>          <span>Piazza: <span *ngIf="review.piazzaCommunity>0">{{review.piazzaCommunity}}</span></span>          <span><app-star-rating [selectedValue]="review.piazzaCommunity"></app-star-rating></span>          <span>Workload:</span><span>{{review.workload}} hours per week</span>        </div>        <b>Review:</b><br>          <p style="white-space: pre-line;">{{review.review}}</p>        <br><br>      Was this review helpful?      <app-review-helpfulness [isLoggedIn]="isLoggedIn" [reviewId]="review.reviewId" [value]="getFeedbackValue(review.reviewId!)"></app-review-helpfulness>    </mat-card-content>    </mat-card>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CourseCardComponent', 'selector': 'app-course-card'},{'name': 'CourseDetailComponent', 'selector': 'app-course-detail'},{'name': 'CourseGridCardComponent', 'selector': 'app-course-grid-card'},{'name': 'CourseGridComponent', 'selector': 'app-course-grid'},{'name': 'CourseListComponent', 'selector': 'app-course-list'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CreateReviewComponent', 'selector': 'app-create-review'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DialogNotLoggedIn', 'selector': 'dialog-not-logged-in-dialog'},{'name': 'DialogNotVerified', 'selector': 'dialog-not-verified-dialog'},{'name': 'DialogOnDelete', 'selector': 'dialog-on-delete-dialog'},{'name': 'DialogReviewSubmission', 'selector': 'dialog-review-sumission-dialog'},{'name': 'DialogSendFeedback', 'selector': 'dialog-send-feedback-dialog'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'EditCourseMetadataComponent', 'selector': 'app-edit-course-metadata'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MenuComponent', 'selector': 'app-nav-nodes'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NothingHereComponent', 'selector': 'app-nothing-here'},{'name': 'PandaPartyComponent', 'selector': 'app-panda-party'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ReviewDetailComponent', 'selector': 'app-review-detail'},{'name': 'ReviewHelpfulnessComponent', 'selector': 'app-review-helpfulness'},{'name': 'ReviewsComponent', 'selector': 'app-reviews'},{'name': 'SadPandaComponent', 'selector': 'app-sad-panda'},{'name': 'SearchInputComponent', 'selector': 'app-search-input'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'StarRatingComponent', 'selector': 'app-star-rating'},{'name': 'ThankyouComponent', 'selector': 'app-thankyou'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'},{'name': 'ViewUserReviewsComponent', 'selector': 'app-view-user-reviews'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ReviewDetailComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ReviewDetailComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

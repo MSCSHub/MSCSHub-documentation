@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mscshub-documentation documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mscshub-documentation documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DialogOnDelete</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>/Users/eric/Projects/MSCSHub/src/app/reviews/review-detail/review-detail.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>dialog-on-delete-dialog</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>dialog-on-delete-dialog.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
+import { Review } from &#x27;src/app/shared/review/review&#x27;;
+import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
+import {Clipboard} from &#x27;@angular/cdk/clipboard&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+
+
+@Component({
+  selector: &#x27;dialog-on-delete-dialog&#x27;,
+  templateUrl: &#x27;dialog-on-delete-dialog.html&#x27;,
+})
+export class DialogOnDelete {}
+
+@Component({
+  selector: &#x27;app-review-detail&#x27;,
+  templateUrl: &#x27;./review-detail.component.html&#x27;,
+  styleUrls: [&#x27;./review-detail.component.scss&#x27;]
+})
+export class ReviewDetailComponent implements OnInit {
+  @Input() reviewId: string &#x3D; &quot;&quot;
+  @Input() author: string &#x3D; &quot;&quot;
+  @Input() class: string &#x3D; &quot;&quot;
+  @Input() pageNumber: number &#x3D; 0
+  @Input() query: string &#x3D; &quot;&quot;
+  @Input() pageLength: number &#x3D; 5
+  @Input() reviewData: Review[] &#x3D; []
+  @Input() dataLength: number &#x3D; 0
+  isLoggedIn: boolean &#x3D; false
+  userData: FbUser | undefined
+  durationInSeconds: number &#x3D; 3
+  pageSizeOptions: number[] &#x3D; [5, 10, 25, 100]
+
+  constructor(
+    private route: ActivatedRoute,
+    private afs: AngularFirestore,
+    private auth: AuthService,
+    private _snackBar: MatSnackBar,
+    private clipboard: Clipboard,
+    public dialog: MatDialog,
+  ) { }
+
+  ngOnInit(): void {
+    this.auth.isLoggedIn.subscribe(status &#x3D;&gt; {this.isLoggedIn &#x3D; status})
+    this.auth.userData.subscribe(data &#x3D;&gt; {
+      this.userData &#x3D; data
+    })
+    this.reviewId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || this.reviewId
+    if(this.reviewId !&#x3D; &quot;&quot;){this.getSingleReview(this.reviewId)}
+  }
+
+  getSingleReview(reviewId: string) {
+    this.afs.collection(&quot;Reviews&quot;).doc(reviewId).get().subscribe(doc &#x3D;&gt; {
+      const review &#x3D; doc.data() as Review
+      review.reviewId &#x3D; doc.id
+      this.reviewData.push(review)
+    })
+  }
+
+  openSnackBar(message: string, reviewId?: string, action: string &#x3D; &quot;Dismiss&quot;) {
+    this.clipboard.copy(&#x60;${window.location.host}/review/${reviewId}&#x60;)
+    this._snackBar.open(message, action, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+
+  removeReview(reviewId: string | undefined): void {
+    if(!reviewId) return
+    this.openDialog(reviewId)
+  }
+
+  openDialog(reviewId: string) {
+    const dialogRef &#x3D; this.dialog.open(DialogOnDelete)
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if(result) {
+        this.afs.collection(&quot;Reviews&quot;).doc(reviewId).delete()
+        let index &#x3D;  this.reviewData.findIndex(x &#x3D;&gt; x.reviewId&#x3D;&#x3D;reviewId)
+        this.reviewData.splice(index, 1)
+      }
+    })
+  }
+
+  getFeedbackValue(reviewId: string): string[] {
+    if(!this.userData?.reviewFeedback) return [&quot;&quot;]
+    if(reviewId in this.userData?.reviewFeedback!) {
+      let feedback &#x3D; this.userData?.reviewFeedback![reviewId]
+      if(feedback) return [&quot;yes&quot;]
+      else return [&quot;no&quot;]
+    }
+    return [&quot;&quot;]
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h2 mat-dialog-title&gt;Delete Review&lt;/h2&gt;
+&lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
+    &lt;p&gt;
+        Are you sure you want to delete this review?
+    &lt;/p&gt;
+&lt;/mat-dialog-content&gt;
+&lt;mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
+  &lt;button mat-button [mat-dialog-close]&#x3D;&quot;false&quot; cdkFocusInitial&gt;Cancel&lt;/button&gt;
+  &lt;button mat-button [mat-dialog-close]&#x3D;&quot;true&quot; cdkFocusInitial&gt;Delete&lt;/button&gt;
+&lt;/mat-dialog-actions&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2 mat-dialog-title>Delete Review</h2><mat-dialog-content class="mat-typography">    <p>        Are you sure you want to delete this review?    </p></mat-dialog-content><mat-dialog-actions align="end">  <button mat-button [mat-dialog-close]="false" cdkFocusInitial>Cancel</button>  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Delete</button></mat-dialog-actions></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CourseCardComponent', 'selector': 'app-course-card'},{'name': 'CourseDetailComponent', 'selector': 'app-course-detail'},{'name': 'CourseGridCardComponent', 'selector': 'app-course-grid-card'},{'name': 'CourseGridComponent', 'selector': 'app-course-grid'},{'name': 'CourseListComponent', 'selector': 'app-course-list'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CreateReviewComponent', 'selector': 'app-create-review'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DialogNotLoggedIn', 'selector': 'dialog-not-logged-in-dialog'},{'name': 'DialogNotVerified', 'selector': 'dialog-not-verified-dialog'},{'name': 'DialogOnDelete', 'selector': 'dialog-on-delete-dialog'},{'name': 'DialogReviewSubmission', 'selector': 'dialog-review-sumission-dialog'},{'name': 'DialogSendFeedback', 'selector': 'dialog-send-feedback-dialog'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'EditCourseMetadataComponent', 'selector': 'app-edit-course-metadata'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'MenuComponent', 'selector': 'app-nav-nodes'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NothingHereComponent', 'selector': 'app-nothing-here'},{'name': 'PandaPartyComponent', 'selector': 'app-panda-party'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ReviewDetailComponent', 'selector': 'app-review-detail'},{'name': 'ReviewHelpfulnessComponent', 'selector': 'app-review-helpfulness'},{'name': 'ReviewsComponent', 'selector': 'app-reviews'},{'name': 'SadPandaComponent', 'selector': 'app-sad-panda'},{'name': 'SearchInputComponent', 'selector': 'app-search-input'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'StarRatingComponent', 'selector': 'app-star-rating'},{'name': 'ThankyouComponent', 'selector': 'app-thankyou'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'},{'name': 'ViewUserReviewsComponent', 'selector': 'app-view-user-reviews'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DialogOnDelete'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DialogOnDelete.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
