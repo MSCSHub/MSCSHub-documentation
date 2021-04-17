@@ -675,7 +675,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(auth: any, courseService: any, afs: AngularFirestore, clipboard: Clipboard, _snackBar: MatSnackBar)</code>
+                            <code>constructor(auth: any, afs: AngularFirestore, clipboard: Clipboard, _snackBar: MatSnackBar, dialog: MatDialog)</code>
                         </td>
                     </tr>
     
@@ -733,10 +733,73 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> removeReview</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>removeReview(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> openDialog</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>openDialog(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 
     <section>
         <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> dialog</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>dialog:     <code>MatDialog</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -790,15 +853,16 @@
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import {Clipboard} from &#x27;@angular/cdk/clipboard&#x27;;
+            <pre><code class="hljs javascript">import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
 import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { DialogOnDelete } from &#x27;src/app/reviews/review-detail/review-detail.component&#x27;;
 import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
 import { ClassService } from &#x27;src/app/services/classes/class.service&#x27;;
 import { Review } from &#x27;src/app/shared/review/review&#x27;;
 import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
-
 
 @Component({
   selector: &#x27;app-view-user-reviews&#x27;,
@@ -812,10 +876,10 @@ export class ViewUserReviewsComponent implements OnInit {
   
   constructor(
     private auth: AuthService,
-    private courseService: ClassService,
     private afs: AngularFirestore,
     private clipboard: Clipboard,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -847,6 +911,22 @@ export class ViewUserReviewsComponent implements OnInit {
     this._snackBar.open(message, action, {
       duration: this.durationInSeconds * 1000,
     });
+  }
+
+  removeReview(reviewId: string | undefined): void {
+    if(!reviewId) return
+    this.openDialog(reviewId)
+  }
+
+  openDialog(reviewId: string) {
+    const dialogRef &#x3D; this.dialog.open(DialogOnDelete)
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if(result) {
+        this.afs.collection(&quot;Reviews&quot;).doc(reviewId).delete()
+        let index &#x3D;  this.reviewData.findIndex(x &#x3D;&gt; x.reviewId&#x3D;&#x3D;reviewId)
+        this.reviewData.splice(index, 1)
+      }
+    })
   }
 
 }

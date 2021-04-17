@@ -901,6 +901,30 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> newSort</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>newSort(event: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 
     <section>
@@ -1124,6 +1148,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> orderByOptions</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>orderByOptions:     <code>{ displayText: string; field: string; order: string; }[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> pageLength</b>
                         </td>
                     </tr>
@@ -1190,6 +1229,21 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> selectedSort</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>selectedSort:     <code>{ displayText: string; field: string; order: string; }</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
@@ -1200,6 +1254,7 @@ import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
 import { ClassService } from &#x27;src/app/services/classes/class.service&#x27;;
 import { ClassData } from &#x27;src/app/shared/class/class&#x27;;
 import { Review } from &#x27;../../shared/review/review&#x27;;
+import firebase from &#x27;firebase/app&#x27;
 
 @Component({
   selector: &#x27;app-course-detail&#x27;,
@@ -1220,6 +1275,12 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
     {title: &#x27;Professor&#x27;, subtitle: &#x27;On a Scale of 1-7&#x27;, value: 0},
     {title: &#x27;Piazza Support&#x27;, subtitle: &#x27;On a Scale of 1-7&#x27;, value: 0},
   ]
+  orderByOptions &#x3D; [
+    {displayText: &quot;Most Helpful&quot;, field: &quot;wilsonScore&quot;, order: &quot;desc&quot;},
+    {displayText: &quot;Least Helpful&quot;, field: &quot;wilsonScore&quot;, order: &quot;asc&quot;},
+    {displayText: &quot;Newest&quot;, field: &quot;timestamp&quot;, order: &quot;desc&quot;},
+    {displayText: &quot;Oldest&quot;, field: &quot;timestamp&quot;, order: &quot;asc&quot;},
+  ]
   reviewDataStack: any[] &#x3D; []
   reviewData: Review[] &#x3D; []
   pageNumber: number &#x3D; 0
@@ -1228,6 +1289,7 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
   pageLength: number &#x3D; 5
   maxLength: number &#x3D; 99999
   isLoggedIn: boolean &#x3D; false
+  selectedSort: {displayText: string, field: string, order: string} &#x3D; this.orderByOptions[2]
   objectKeys &#x3D; Object.keys
 
   @ViewChild(&#x27;imageContainer&#x27;)  imageContainer!: ElementRef;
@@ -1269,12 +1331,16 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
   }
 
   getFirstPage() {
+    this.pageNumber &#x3D; 0
     this.disablePrev &#x3D; true
+    this.disableNext &#x3D; false
+    this.reviewDataStack &#x3D; []
     this.afs.collection(&#x27;Reviews&#x27;, ref &#x3D;&gt; ref
       .where(&quot;course&quot;, &#x27;&#x3D;&#x3D;&#x27;, this.courseName)
       .limit(this.pageLength)
-      .orderBy(&quot;timestamp&quot;,&quot;desc&quot;)
+      .orderBy(this.selectedSort.field, this.selectedSort.order as firebase.firestore.OrderByDirection)
     ).get().subscribe(response &#x3D;&gt; {
+      this.reviewData &#x3D; []
       if (!response.docs.length){
         console.warn(&quot;Course Detail: No reviews exist&quot;)
         //TODO Add something to let the user know that there are no reviews
@@ -1282,7 +1348,6 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
         this.disablePrev &#x3D; true
         return
       }
-      this.reviewData &#x3D; []
       for (let item of response.docs) {
         const review &#x3D; item.data() as Review
         review.reviewId &#x3D; item.id
@@ -1303,7 +1368,7 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
     this.afs.collection(&#x27;Reviews&#x27;, ref &#x3D;&gt; ref
       .where(&quot;course&quot;, &#x27;&#x3D;&#x3D;&#x27;, this.courseName)
       .limit(this.pageLength)
-      .orderBy(&quot;timestamp&quot;,&quot;desc&quot;)
+      .orderBy(this.selectedSort.field, this.selectedSort.order as firebase.firestore.OrderByDirection)
       .startAfter(lastReview)
     ).get().subscribe(response &#x3D;&gt; {
       if (!response.docs.length){
@@ -1350,7 +1415,7 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
     window.location.hash &#x3D; &quot;&quot;
     window.location.hash &#x3D; location
     let x &#x3D; document.getElementsByClassName(&quot;mat-drawer-content&quot;)[0]
-    x.scroll(0, x.scrollTop - 30)
+    x.scroll(0, x.scrollTop - 40)
   }
 
   updateCards(course: ClassData): void {
@@ -1366,6 +1431,10 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
 
   semesterMatch(season: string, semesters: string[]): string {
     return semesters.filter(function(k){return ~k.indexOf(season)}).toString().split(&#x27;,&#x27;).join(&#x27;\n&#x27;)
+  }
+
+  newSort(event: any): void {
+    this.getFirstPage()
   }
 }
 </code></pre>
