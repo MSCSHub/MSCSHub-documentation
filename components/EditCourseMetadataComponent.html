@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -558,12 +552,6 @@
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
@@ -897,7 +885,12 @@ export class EditCourseMetadataComponent implements OnInit {
     private afs: AngularFirestore,
     private router: Router,
     private tc: TitleCasePipe,
-  ) { }
+  ) {
+    if(this.courseService.website &#x3D;&#x3D; &quot;dataScience&quot;) {
+      this.categories &#x3D; [&quot;foundations&quot;, &quot;elective&quot;]
+      this.languages &#x3D; [&#x27;Python&#x27;, &#x27;R&#x27;, &#x27;No Code&#x27;]
+    }
+  }
 
   ngOnInit(): void {
     this.courseName &#x3D; this.route.snapshot.paramMap.get(&#x27;courseId&#x27;) || &quot;&quot;
@@ -962,6 +955,7 @@ export class EditCourseMetadataComponent implements OnInit {
         Textbook: this.f.textbookBool.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
         TextbookName: this.tc.transform(this.f.textbook.value),
       }).then(() &#x3D;&gt; {
+        this.courseService.updateCourseData()
         this.router.navigate([&#x60;courses/${this.courseName}&#x60;])
       })
   }

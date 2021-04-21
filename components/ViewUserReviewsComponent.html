@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -558,12 +552,6 @@
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
@@ -858,9 +846,8 @@ import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
-import { DialogOnDelete } from &#x27;src/app/reviews/review-detail/review-detail.component&#x27;;
+import { DialogOnDelete } from &#x27;src/app/shared/dialog/review-delete/dialog-on-delete.component&#x27;;
 import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
-import { ClassService } from &#x27;src/app/services/classes/class.service&#x27;;
 import { Review } from &#x27;src/app/shared/review/review&#x27;;
 import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
 

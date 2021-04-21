@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -558,12 +552,6 @@
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
@@ -1289,7 +1277,7 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
   pageLength: number &#x3D; 5
   maxLength: number &#x3D; 99999
   isLoggedIn: boolean &#x3D; false
-  selectedSort: {displayText: string, field: string, order: string} &#x3D; this.orderByOptions[2]
+  selectedSort: {displayText: string, field: string, order: string} &#x3D; this.orderByOptions[0]
   objectKeys &#x3D; Object.keys
 
   @ViewChild(&#x27;imageContainer&#x27;)  imageContainer!: ElementRef;
@@ -1343,7 +1331,6 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
       this.reviewData &#x3D; []
       if (!response.docs.length){
         console.warn(&quot;Course Detail: No reviews exist&quot;)
-        //TODO Add something to let the user know that there are no reviews
         this.disableNext &#x3D; true
         this.disablePrev &#x3D; true
         return
@@ -1373,7 +1360,6 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
     ).get().subscribe(response &#x3D;&gt; {
       if (!response.docs.length){
         console.warn(&quot;Course Detail: No reviews exist&quot;)
-        //TODO Add something to let the user know that there are no reviews
         this.disableNext &#x3D; true
         return
       }

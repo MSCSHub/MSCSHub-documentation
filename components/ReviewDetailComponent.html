@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -560,12 +554,6 @@
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
                                        </li>
                                        <li class="link">
@@ -667,10 +655,366 @@
     </table>
 </section>
 
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>author</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>string</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>class</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>string</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>dataLength</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>number</code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>0</code>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>pageLength</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>number</code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>5</code>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>pageNumber</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>number</code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>0</code>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>query</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>string</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>reviewData</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>reviewId</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>string</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
 
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(route: <a href="https://angular.io/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank" >ActivatedRoute</a>, afs: AngularFirestore, auth: any, _snackBar: MatSnackBar, clipboard: Clipboard, dialog: MatDialog)</code>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+    </section>
 
+    <section>
+        <h3 id="methods">Methods</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> getSingleReview</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>getSingleReview(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> openSnackBar</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>openSnackBar(message: string, reviewId: string, action: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> removeReview</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>removeReview(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> openDialog</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>openDialog(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> getFeedbackValue</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>getFeedbackValue(reviewId: string)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>string[]</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
+    <section>
+        <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> dialog</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>dialog:     <code>MatDialog</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> durationInSeconds</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>durationInSeconds:     <code>number</code>
+    </bcode>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value: </i><code>3</code>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> isLoggedIn</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>isLoggedIn:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value: </i><code>false</code>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> pageSizeOptions</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>pageSizeOptions:     <code>number[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> userData</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>userData:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
             <pre><code class="hljs javascript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
@@ -682,13 +1026,7 @@ import { Review } from &#x27;src/app/shared/review/review&#x27;;
 import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
 import {Clipboard} from &#x27;@angular/cdk/clipboard&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
-
-
-@Component({
-  selector: &#x27;dialog-on-delete-dialog&#x27;,
-  templateUrl: &#x27;dialog-on-delete-dialog.html&#x27;,
-})
-export class DialogOnDelete {}
+import { DialogOnDelete } from &#x27;src/app/shared/dialog/review-delete/dialog-on-delete.component&#x27;;
 
 @Component({
   selector: &#x27;app-review-detail&#x27;,

@@ -124,7 +124,7 @@
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
+                                    <a href="../components/DialogReviewTooShort.html"  class="active" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -154,7 +154,7 @@
                                     <a href="../components/NavbarComponent.html" >NavbarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NothingHereComponent.html"  class="active" >NothingHereComponent</a>
+                                    <a href="../components/NothingHereComponent.html" >NothingHereComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/PandaPartyComponent.html" >PandaPartyComponent</a>
@@ -411,7 +411,7 @@
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
+                                           <a href="../components/DialogReviewTooShort.html"  class="active" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -441,7 +441,7 @@
                                            <a href="../components/NavbarComponent.html" >NavbarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NothingHereComponent.html"  class="active" >NothingHereComponent</a>
+                                           <a href="../components/NothingHereComponent.html" >NothingHereComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/PandaPartyComponent.html" >PandaPartyComponent</a>
@@ -594,7 +594,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>NothingHereComponent</li>
+  <li>DialogReviewTooShort</li>
 </ol>
 
 
@@ -612,7 +612,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/misc/nothing-here/nothing-here.component.ts</code>
+    <code>src/app/shared/dialog/review-too-short/dialog-review-too-short.component.ts</code>
 </p>
 
 
@@ -635,19 +635,15 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-nothing-here</code></td>
+                <td class="col-md-9"><code>dialog-review-too-short-dialog</code></td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>nothing-here.component.scss</code></td>
-            </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>nothing-here.component.html</code></td>
+                <td class="col-md-9"><code>dialog-review-too-short-dialog.html</code></td>
             </tr>
 
 
@@ -657,47 +653,7 @@
 
 
 
-    <section>
-        <h3 id="constructor">Constructor</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>constructor()</code>
-                        </td>
-                    </tr>
-    
-                </tbody>
-            </table>
-    </section>
 
-    <section>
-        <h3 id="methods">Methods</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> randomInt</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>randomInt(max: number, min: number)</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>number</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </section>
 
     <section>
         <h3 id="inputs">Properties</h3>
@@ -705,68 +661,23 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> randomSource</b>
+                            <b> content</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>randomSource:     <code>string</code>
-    </bcode>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> sources</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>sources:     <code>string[]</code>
-    </bcode>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> subtitle</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>subtitle:     <code>string</code>
+                            <code>content:     <code>string</code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Default value: </i><code>Mr. Panda is here to help you get home</code>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> title</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>title:     <code>string</code>
-    </bcode>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value: </i><code>You look lost...</code>
+                                <i>Default value: </i><code>
+        Hi, thanks for taking the time to write a review, though are you sure you wrote enough?
+        Most students typically write over 200 words, and it looks like you wrote less than 100.
+    
+        Would you please consider going back and adding some more detail? Your classmates would appreciate it!
+      </code>
                             </td>
                         </tr>
                 </tbody>
@@ -774,38 +685,20 @@
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+            <pre><code class="hljs javascript">import { Component } from &quot;@angular/core&quot;;
 
 @Component({
-  selector: &#x27;app-nothing-here&#x27;,
-  templateUrl: &#x27;./nothing-here.component.html&#x27;,
-  styleUrls: [&#x27;./nothing-here.component.scss&#x27;]
+  selector: &#x27;dialog-review-too-short-dialog&#x27;,
+  templateUrl: &#x27;dialog-review-too-short-dialog.html&#x27;,
 })
-export class NothingHereComponent implements OnInit {
-  title &#x3D; &quot;You look lost...&quot;
-  subtitle &#x3D; &quot;Mr. Panda is here to help you get home&quot;
-  sources &#x3D; [ // teeturtle.com
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/imported/cant-adult-today-t-shirt-teeturtle-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/1986199881257/Say-No-to-Doing-Things_800x800_SEPS2-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/1986199881068/Im-Having-So-Much-Fun_800x800_SEPS-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/1986199881245/Food-First-Things-Later_800x800_SEPS-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/1986199880493/Boba-Panda_800x800_SEPS-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/1986199880980/Hurts-So-Good_800x800_SEPS-1000x1000.jpg&quot;,
-    &quot;https://12ax7web.s3.amazonaws.com/accounts/1/products/imported/panda-hug-t-shirt-teeturtle-1000x1000.jpg&quot;,
-  ]
-  randomSource: string &#x3D; &quot;&quot;
-  
-  constructor() { }
-  
-  ngOnInit(): void {
-    this.randomSource &#x3D; this.sources[this.randomInt(this.sources.length)]
-  }
+export class DialogReviewTooShort {
+  content &#x3D; &#x60;
+    Hi, thanks for taking the time to write a review, though are you sure you wrote enough?
+    Most students typically write over 200 words, and it looks like you wrote less than 100.
 
-  randomInt(max: number, min: number &#x3D; 0): number {
-    return Math.floor(Math.random()*max)
-  }
-}
-</code></pre>
+    Would you please consider going back and adding some more detail? Your classmates would appreciate it!
+  &#x60;
+}</code></pre>
         </div>
     </div>
 

@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -560,12 +554,6 @@
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
                                        </li>
                                        <li class="link">
@@ -624,7 +612,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/reviews/review-detail/review-detail.component.ts</code>
+    <code>src/app/shared/dialog/review-delete/dialog-on-delete.component.ts</code>
 </p>
 
 
@@ -669,102 +657,13 @@
 
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
-import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
-import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
-import { ActivatedRoute } from &#x27;@angular/router&#x27;;
-import { AuthService } from &#x27;src/app/services/auth/auth.service&#x27;;
-import { Review } from &#x27;src/app/shared/review/review&#x27;;
-import { FbUser } from &#x27;src/app/shared/user/user&#x27;;
-import {Clipboard} from &#x27;@angular/cdk/clipboard&#x27;;
-import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
-
+            <pre><code class="hljs javascript">import { Component } from &quot;@angular/core&quot;;
 
 @Component({
   selector: &#x27;dialog-on-delete-dialog&#x27;,
   templateUrl: &#x27;dialog-on-delete-dialog.html&#x27;,
 })
-export class DialogOnDelete {}
-
-@Component({
-  selector: &#x27;app-review-detail&#x27;,
-  templateUrl: &#x27;./review-detail.component.html&#x27;,
-  styleUrls: [&#x27;./review-detail.component.scss&#x27;]
-})
-export class ReviewDetailComponent implements OnInit {
-  @Input() reviewId: string &#x3D; &quot;&quot;
-  @Input() author: string &#x3D; &quot;&quot;
-  @Input() class: string &#x3D; &quot;&quot;
-  @Input() pageNumber: number &#x3D; 0
-  @Input() query: string &#x3D; &quot;&quot;
-  @Input() pageLength: number &#x3D; 5
-  @Input() reviewData: Review[] &#x3D; []
-  @Input() dataLength: number &#x3D; 0
-  isLoggedIn: boolean &#x3D; false
-  userData: FbUser | undefined
-  durationInSeconds: number &#x3D; 3
-  pageSizeOptions: number[] &#x3D; [5, 10, 25, 100]
-
-  constructor(
-    private route: ActivatedRoute,
-    private afs: AngularFirestore,
-    private auth: AuthService,
-    private _snackBar: MatSnackBar,
-    private clipboard: Clipboard,
-    public dialog: MatDialog,
-  ) { }
-
-  ngOnInit(): void {
-    this.auth.isLoggedIn.subscribe(status &#x3D;&gt; {this.isLoggedIn &#x3D; status})
-    this.auth.userData.subscribe(data &#x3D;&gt; {
-      this.userData &#x3D; data
-    })
-    this.reviewId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || this.reviewId
-    if(this.reviewId !&#x3D; &quot;&quot;){this.getSingleReview(this.reviewId)}
-  }
-
-  getSingleReview(reviewId: string) {
-    this.afs.collection(&quot;Reviews&quot;).doc(reviewId).get().subscribe(doc &#x3D;&gt; {
-      const review &#x3D; doc.data() as Review
-      review.reviewId &#x3D; doc.id
-      this.reviewData.push(review)
-    })
-  }
-
-  openSnackBar(message: string, reviewId?: string, action: string &#x3D; &quot;Dismiss&quot;) {
-    this.clipboard.copy(&#x60;${window.location.host}/review/${reviewId}&#x60;)
-    this._snackBar.open(message, action, {
-      duration: this.durationInSeconds * 1000,
-    });
-  }
-
-  removeReview(reviewId: string | undefined): void {
-    if(!reviewId) return
-    this.openDialog(reviewId)
-  }
-
-  openDialog(reviewId: string) {
-    const dialogRef &#x3D; this.dialog.open(DialogOnDelete)
-    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
-      if(result) {
-        this.afs.collection(&quot;Reviews&quot;).doc(reviewId).delete()
-        let index &#x3D;  this.reviewData.findIndex(x &#x3D;&gt; x.reviewId&#x3D;&#x3D;reviewId)
-        this.reviewData.splice(index, 1)
-      }
-    })
-  }
-
-  getFeedbackValue(reviewId: string): string[] {
-    if(!this.userData?.reviewFeedback) return [&quot;&quot;]
-    if(reviewId in this.userData?.reviewFeedback!) {
-      let feedback &#x3D; this.userData?.reviewFeedback![reviewId]
-      if(feedback) return [&quot;yes&quot;]
-      else return [&quot;no&quot;]
-    }
-    return [&quot;&quot;]
-  }
-}
-</code></pre>
+export class DialogOnDelete {}</code></pre>
         </div>
     </div>
 

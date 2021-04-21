@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -560,12 +554,6 @@
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
                                        </li>
                                        <li class="link">
@@ -670,9 +658,6 @@
                                 <a href="../components/AdminComponent.html">AdminComponent</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="../components/CoursesComponent.html">CoursesComponent</a>
-                            </li>
-                            <li class="list-group-item">
                                 <a href="../components/ReviewsComponent.html">ReviewsComponent</a>
                             </li>
                             <li class="list-group-item">
@@ -713,6 +698,9 @@
                             </li>
                             <li class="list-group-item">
                                 <a href="../s/DialogReviewSubmission.html">DialogReviewSubmission</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../s/DialogReviewTooShort.html">DialogReviewTooShort</a>
                             </li>
                             <li class="list-group-item">
                                 <a href="../s/DialogNotLoggedIn.html">DialogNotLoggedIn</a>
@@ -799,7 +787,6 @@ import { MenuComponent } from &#x27;./navigation/navbar/menu/menu.component&#x27
 import { LoginComponent } from &#x27;./user/login/login.component&#x27;;
 import { SettingsComponent } from &#x27;./user/settings/settings.component&#x27;;
 import { AdminComponent } from &#x27;./user/admin/admin.component&#x27;;
-import { CoursesComponent } from &#x27;./courses/courses.component&#x27;;
 import { ReviewsComponent } from &#x27;./reviews/reviews.component&#x27;;
 
 // Firebase
@@ -811,7 +798,7 @@ import { environment } from &#x27;../environments/environment&#x27;;
 
 
 import { CourseDetailComponent } from &#x27;./courses/course-detail/course-detail.component&#x27;;
-import { ReviewDetailComponent, DialogOnDelete } from &#x27;./reviews/review-detail/review-detail.component&#x27;;
+import { ReviewDetailComponent } from &#x27;./reviews/review-detail/review-detail.component&#x27;;
 import { RegisterComponent } from &#x27;./user/register/register.component&#x27;;
 import { ForgotPasswordComponent } from &#x27;./user/forgot-password/forgot-password.component&#x27;;
 import { VerifyEmailComponent } from &#x27;./user/verify-email/verify-email.component&#x27;;
@@ -820,10 +807,13 @@ import { CourseCardComponent } from &#x27;./courses/course-detail/course-card/co
 import { CourseGridComponent } from &#x27;./courses/course-grid/course-grid.component&#x27;;
 import { CourseGridCardComponent } from &#x27;./courses/course-grid/course-grid-card/course-grid-card.component&#x27;;
 import { LogoutComponent } from &#x27;./user/logout/logout.component&#x27;;
-import { CreateReviewComponent, DialogReviewSubmission } from &#x27;./reviews/create-review/create-review.component&#x27;;
+import { CreateReviewComponent } from &#x27;./reviews/create-review/create-review.component&#x27;;
 import { DialogNotLoggedIn } from &#x27;./shared/dialog/not-logged-in/dialog-not-logged-in.component&#x27;;
 import { DialogNotVerified } from &#x27;./shared/dialog/not-verified/dialog-not-verified.component&#x27;;
 import { DialogSendFeedback } from &#x27;./shared/dialog/send-feedback/dialog-send-feedback.component&#x27;;
+import { DialogReviewSubmission } from &#x27;./shared/dialog/review-submission/dialog-review-submission.component&#x27;;
+import { DialogReviewTooShort } from &#x27;./shared/dialog/review-too-short/dialog-review-too-short.component&#x27;;
+import { DialogOnDelete } from &#x27;./shared/dialog/review-delete/dialog-on-delete.component&#x27;;
 import { EditComponent } from &#x27;./user/edit/edit.component&#x27;;
 import { ViewUserReviewsComponent } from &#x27;./user/view-user-reviews/view-user-reviews.component&#x27;;
 import { EditCourseMetadataComponent } from &#x27;./courses/course-detail/edit-course-metadata/edit-course-metadata.component&#x27;;
@@ -846,7 +836,6 @@ import { ReviewHelpfulnessComponent } from &#x27;./reviews/review-detail/review-
     LoginComponent,
     SettingsComponent,
     AdminComponent,
-    CoursesComponent,
     ReviewsComponent,
     CourseDetailComponent,
     ReviewDetailComponent,
@@ -861,6 +850,7 @@ import { ReviewHelpfulnessComponent } from &#x27;./reviews/review-detail/review-
     LogoutComponent,
     CreateReviewComponent,
     DialogReviewSubmission,
+    DialogReviewTooShort,
     DialogNotLoggedIn,
     DialogNotVerified,
     DialogSendFeedback,

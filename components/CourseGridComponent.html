@@ -106,9 +106,6 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                </li>
-                                <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +122,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -267,12 +267,6 @@
                                     <a href="../interfaces/FbUser.html" >FbUser</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/IClass.html" >IClass</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../interfaces/IReview.html" >IReview</a>
-                                </li>
-                                <li class="link">
                                     <a href="../interfaces/Review.html" >Review</a>
                                 </li>
                                 <li class="link">
@@ -399,9 +393,6 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CoursesComponent.html" >CoursesComponent</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
                                        </li>
                                        <li class="link">
@@ -418,6 +409,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogReviewSubmission.html" >DialogReviewSubmission</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DialogReviewTooShort.html" >DialogReviewTooShort</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/DialogSendFeedback.html" >DialogSendFeedback</a>
@@ -558,12 +552,6 @@
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/FbUser.html" >FbUser</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IClass.html" >IClass</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../interfaces/IReview.html" >IReview</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/Review.html" >Review</a>
@@ -840,12 +828,12 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> visibleClasses2</b>
+                            <b> visibleClassesSet</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>visibleClasses2:     <code>any</code>
+                            <code>visibleClassesSet:     <code>any</code>
     </bcode>
                         </td>
                     </tr>
@@ -869,11 +857,16 @@ export class CourseGridComponent implements OnInit {
   languages: string[] &#x3D; [&quot;C&quot;, &quot;C++&quot;, &quot;Kotlin&quot;, &quot;GoLang&quot;, &quot;MATLAB&quot;, &quot;Python&quot;, &quot;Rust&quot;, &quot;No Code&quot;]
   selected: string[] &#x3D; []
   visibleClasses: ClassData[] &#x3D; []
-  visibleClasses2: Set&lt;ClassData&gt; &#x3D; new Set()
+  visibleClassesSet: Set&lt;ClassData&gt; &#x3D; new Set()
 
   constructor(
     private courses: ClassService,
-  ) { }
+  ) { 
+    if(this.courses.website &#x3D;&#x3D; &quot;dataScience&quot;) {
+      this.categories &#x3D; [&quot;foundations&quot;, &quot;elective&quot;]
+      this.languages &#x3D; [&#x27;Python&#x27;, &#x27;R&#x27;, &#x27;No Code&#x27;]
+    }
+  }
 
   ngOnInit(): void {
     this.courses.classes.subscribe(data &#x3D;&gt; {
@@ -898,37 +891,37 @@ export class CourseGridComponent implements OnInit {
 
   filterItems(): void {
     // this.visibleClasses &#x3D; []
-    this.visibleClasses2.clear()
+    this.visibleClassesSet.clear()
     let selectedLangs: ClassData[] &#x3D; []
     let selectedCats: ClassData[] &#x3D; []
     if(this.selected.length &#x3D;&#x3D;&#x3D; 0){
       this.classes.forEach(data &#x3D;&gt; {
-        this.visibleClasses2.add(data)
+        this.visibleClassesSet.add(data)
       })
     } else {
       for(var i&#x3D;0; i&lt;this.selected.length; i++){
         let item &#x3D; this.selected[i]
         if(this.categories.includes(item)){
           this.classes.filter(x &#x3D;&gt; x.category &#x3D;&#x3D;&#x3D; item).forEach(data &#x3D;&gt; {
-            this.visibleClasses2.add(data)
+            this.visibleClassesSet.add(data)
           })
         } else {
           this.classes.filter(x &#x3D;&gt; x.languages?.includes(item)).forEach(data &#x3D;&gt; {
-            this.visibleClasses2.add(data)
+            this.visibleClassesSet.add(data)
           })
         }
       }
       if (selectedLangs.length &#x3D;&#x3D;&#x3D; 0 || selectedCats.length &#x3D;&#x3D;&#x3D; 0){
         selectedCats.forEach(data &#x3D;&gt; {
-          this.visibleClasses2.add(data)
+          this.visibleClassesSet.add(data)
         })
       } else {
         selectedLangs.filter(x &#x3D;&gt; selectedCats.includes(x)).forEach(data &#x3D;&gt; {
-          this.visibleClasses2.add(data)
+          this.visibleClassesSet.add(data)
         })
       }
     }
-    this.visibleClasses &#x3D; Array.from(this.visibleClasses2)
+    this.visibleClasses &#x3D; Array.from(this.visibleClassesSet)
     this.visibleClasses.sort((a, b) &#x3D;&gt; (a.ClassName &gt; b.ClassName) ? 1 : -1)
   }
 }</code></pre>
