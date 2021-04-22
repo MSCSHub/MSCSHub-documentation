@@ -65,9 +65,6 @@
                                     <a href="../modules/AppModule.html"  class="active" >AppModule</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
-                                </li>
-                                <li class="link">
                                     <a href="../modules/MaterialModule.html" >MaterialModule</a>
                                 </li>
                         </ul>
@@ -104,6 +101,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CreateCourseComponent.html" >CreateCourseComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
@@ -216,9 +216,6 @@
                         </ul>
                     </li>
             
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
-                    </li>
             
                     <li class="chapter">
                         <div class="simple">
@@ -352,9 +349,6 @@
                                            <a href="../modules/AppModule.html"  class="active" >AppModule</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../modules/MaterialModule.html" >MaterialModule</a>
                                        </li>
                                </ul>
@@ -391,6 +385,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CreateCourseComponent.html" >CreateCourseComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
@@ -503,9 +500,6 @@
                                </ul>
                            </li>
                    
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
-                           </li>
                    
                            <li class="chapter">
                                <div class="simple">
@@ -744,14 +738,14 @@
                             <li class="list-group-item">
                                 <a href="../components/ReviewHelpfulnessComponent.html">ReviewHelpfulnessComponent</a>
                             </li>
+                            <li class="list-group-item">
+                                <a href="../components/CreateCourseComponent.html">CreateCourseComponent</a>
+                            </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h3>Imports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#imports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
-                            <li class="list-group-item">
-                                    <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
-                            </li>
                             <li class="list-group-item">
                                     <a href="../modules/MaterialModule.html" >MaterialModule</a>
                             </li>
@@ -825,6 +819,7 @@ import { NothingHereComponent } from &#x27;./misc/nothing-here/nothing-here.comp
 import { PandaPartyComponent } from &#x27;./misc/panda-party/panda-party.component&#x27;;
 import { StarRatingComponent } from &#x27;./reviews/star-rating/star-rating.component&#x27;;
 import { ReviewHelpfulnessComponent } from &#x27;./reviews/review-detail/review-helpfulness/review-helpfulness.component&#x27;;
+import { CreateCourseComponent } from &#x27;./courses/create-course/create-course.component&#x27;;
 
 @NgModule({
   declarations: [
@@ -865,6 +860,7 @@ import { ReviewHelpfulnessComponent } from &#x27;./reviews/review-detail/review-
     PandaPartyComponent,
     StarRatingComponent,
     ReviewHelpfulnessComponent,
+    CreateCourseComponent,
   ],
   imports: [
     BrowserModule,

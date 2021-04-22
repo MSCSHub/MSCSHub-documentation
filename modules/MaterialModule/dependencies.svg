@@ -28,13 +28,13 @@
 <title>cluster_MaterialModule_imports</title>
 <polygon fill="none" stroke="black" points="1194,-78 1194,-130 6139,-130 6139,-78 1194,-78"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_MaterialModule_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 1186,-130 1186,-78 16,-78"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_MaterialModule_exports</title>
 <polygon fill="none" stroke="black" points="905,-208 905,-260 5967,-260 5967,-208 905,-208"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_MaterialModule_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 1186,-130 1186,-78 16,-78"/>
 </g>
 <!-- MatAutocompleteModule -->
 <g id="node1" class="node">

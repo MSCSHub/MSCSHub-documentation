@@ -103,7 +103,7 @@
                                     <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CreateCourseComponent.html" >CreateCourseComponent</a>
+                                    <a href="../components/CreateCourseComponent.html"  class="active" >CreateCourseComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
@@ -211,7 +211,7 @@
                                 id="xs-classes-links"
                             >
                                 <li class="link">
-                                    <a href="../classes/AppPage.html"  class="active" >AppPage</a>
+                                    <a href="../classes/AppPage.html" >AppPage</a>
                                 </li>
                         </ul>
                     </li>
@@ -387,7 +387,7 @@
                                            <a href="../components/CourseListComponent.html" >CourseListComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CreateCourseComponent.html" >CreateCourseComponent</a>
+                                           <a href="../components/CreateCourseComponent.html"  class="active" >CreateCourseComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CreateReviewComponent.html" >CreateReviewComponent</a>
@@ -495,7 +495,7 @@
                                        id="classes-links"
                    >
                                        <li class="link">
-                                           <a href="../classes/AppPage.html"  class="active" >AppPage</a>
+                                           <a href="../classes/AppPage.html" >AppPage</a>
                                        </li>
                                </ul>
                            </li>
@@ -582,114 +582,458 @@
                    
                    </nav>
                </div>
-               <div class="content class">
+               <div class="content component">
                    <div class="content-data">
 
 
-
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>AppPage</li>
+  <li>Components</li>
+  <li>CreateCourseComponent</li>
 </ol>
 
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-    </li>
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-    </li>
-</ul>
 
-<div class="tab-content">
-    <div class="tab-pane fade active in" id="infos">
-        <p class="comment">
-            <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>e2e/src/app.po.ts</code>
-        </p>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        </li>
+        <li>
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+        </li>
+    </ul>
 
-
-
-            <section>
-                <h3 id="methods">Methods</h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> navigateTo</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>navigateTo()</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>any</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> getTitleText</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>getTitleText()</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>any</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/courses/create-course/create-course.component.ts</code>
+</p>
 
 
-    </div>
-    <div class="tab-pane fade tab-source-code" id="source">
-        <pre><code class="hljs javascript">import { browser, by, element } from &#x27;protractor&#x27;;
 
-export class AppPage {
-  async navigateTo(): Promise&lt;unknown&gt; {
-    return browser.get(browser.baseUrl);
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                    <code>
+                        TitleCasePipe
+                    </code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-course</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>create-course.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>create-course.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(formBuilder: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, route: <a href="https://angular.io/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank" >ActivatedRoute</a>, courseService: any, afs: AngularFirestore, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>, tc: TitleCasePipe)</code>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="methods">Methods</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> setFieldData</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>setFieldData(field: <a href="https://angular.io/docs/ts/latest/api/forms/index/AbstractControl-class.html" target="_blank" >AbstractControl</a>, fieldBool: <a href="https://angular.io/docs/ts/latest/api/forms/index/AbstractControl-class.html" target="_blank" >AbstractControl</a>, fieldValue: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> onSubmit</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>onSubmit()</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> categories</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>categories:     <code>string[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> classFields</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>classFields:     <code>{ field: string; display: string; }[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> courseData</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>courseData:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> courseMetadataForm</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>courseMetadataForm:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> courseName</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>courseName:     <code>string</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> f</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>f:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> fields</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>fields:     <code>string[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> FormGroup</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>FormGroup:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> languages</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>languages:     <code>string[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+</div>
+        <div class="tab-pane fade tab-source-code" id="source">
+            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { AbstractControl, FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { ClassService } from &#x27;src/app/services/classes/class.service&#x27;;
+import { ClassData } from &#x27;src/app/shared/class/class&#x27;;
+import { TitleCasePipe } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-create-course&#x27;,
+  templateUrl: &#x27;./create-course.component.html&#x27;,
+  styleUrls: [&#x27;./create-course.component.scss&#x27;],
+  providers: [TitleCasePipe],
+})
+export class CreateCourseComponent implements OnInit {
+  courseName: string &#x3D; &quot;&quot;
+  fields: string[] &#x3D; [&quot;exams&quot;, &quot;homework&quot;, &quot;projects&quot;, &quot;proofs&quot;, &quot;peer reviewed&quot;, &quot;textbook&quot;]
+  languages: string[] &#x3D; [&quot;C&quot;, &quot;C++&quot;, &quot;Kotlin&quot;, &quot;GoLang&quot;, &quot;MATLAB&quot;, &quot;Python&quot;, &quot;Rust&quot;, &quot;No Code&quot;]
+  categories: string[] &#x3D; [&quot;Applications&quot;, &quot;Systems&quot;, &quot;Theory&quot;, &quot;Elective&quot;]
+  courseMetadataForm!: FormGroup
+  courseData: ClassData | undefined
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private courseService: ClassService,
+    private afs: AngularFirestore,
+    private router: Router,
+    private tc: TitleCasePipe,
+  ) {
+    if(this.courseService.website &#x3D;&#x3D; &quot;dataScience&quot;) {
+      this.categories &#x3D; [&quot;foundations&quot;, &quot;elective&quot;]
+      this.languages &#x3D; [&#x27;Python&#x27;, &#x27;R&#x27;, &#x27;No Code&#x27;]
+    }
+  }
+  classFields &#x3D; [
+    {field: &#x27;ClassName&#x27;, display: &#x27;Class Name&#x27;},
+    {field: &#x27;CourseNumber&#x27;, display: &#x27;Course Number&#x27;},
+    {field: &#x27;GraphicThumbnail&#x27;, display: &#x27;Graphic Thumbnail (from main grid)&#x27;},
+    {field: &#x27;GraphicColor&#x27;, display: &#x27;Graphic Color (from course page - lienar-gradient...)&#x27;},
+    {field: &#x27;GraphicUrl&#x27;, display: &#x27;Graphic URL (from course page - url(https://...) )&#x27;},
+    {field: &#x27;Teacher&#x27;, display: &#x27;Teacher (separated by &amp;)&#x27;},
+    {field: &#x27;category&#x27;, display: &#x27;Category (if dataScience only this does not get used)&#x27;},
+    {field: &#x27;csIsComputerScience&#x27;, display: &#x27;is Computer Science? boolean true or false&#x27;},
+    {field: &#x27;csCategory&#x27;, display: &#x27;CS category&#x27;},
+    {field: &#x27;dsIsDataScience&#x27;, display: &#x27;is Data Science? boolean true or false&#x27;},
+    {field: &#x27;dsCategory&#x27;, display: &#x27;DS category&#x27;},
+  ]
+
+  ngOnInit(): void {
+    this.courseMetadataForm &#x3D; this.formBuilder.group({
+      BookUsefulnessAvg: [0, Validators.required],
+      BookUsefulnessCount: [0, Validators.required],
+      ClassName: [&#x27;&#x27;, Validators.required],               // NEED
+      CourseNumber: [&#x27;&#x27;, Validators.required],            // NEED
+      DifficultyAvg: [0, Validators.required],
+      DifficultyCount: [0, Validators.required],
+      GraphicThumbnail: [&#x27;&#x27;, Validators.required],        // NEED
+      GraphicColor: [&#x27;&#x27;, Validators.required],            // NEED
+      GraphicUrl: [&#x27;url(https://www.cs.utexas.edu&#x27;, Validators.required],              // NEED
+      LectureQualityAvg: [0, Validators.required],
+      LectureQualityCount: [0, Validators.required],
+      PiazzaCommunityAvg: [0, Validators.required],
+      PiazzaCommunityCount: [0, Validators.required],
+      ProfessorQualityAvg: [0, Validators.required],
+      ProfessorQualityCount: [0, Validators.required],
+      RatingAvg: [0, Validators.required],
+      RatingCount: [0, Validators.required],
+      Teacher: [&#x27;&#x27;, Validators.required],                 // NEED
+      Textbook: [false, Validators.required],             
+      TextbookName: [&#x27;&#x27;, Validators.required],
+      WorkloadAvg: [0, Validators.required],
+      WorkloadCount: [0, Validators.required],
+      category: [&#x27;&#x27;, Validators.required],                // NEED
+      csIsComputerScience: [&#x27;&#x27;, Validators.required],     // NEED
+      csCategory: [&#x27;&#x27;],              // NEED
+      dsIsDataScience: [&#x27;&#x27;, Validators.required],         // NEED
+      dsCategory: [&#x27;&#x27;],              // NEED
+      languages: [&#x27;&#x27;, Validators.required],               
+      // lastUpdated: [&#x27;&#x27;, Validators.required],
+      metaExams: [&#x27;&#x27;, Validators.required],
+      metaHomework: [&#x27;&#x27;, Validators.required],
+      metaPeerReviewed: [&#x27;&#x27;, Validators.required],
+      metaProjects: [&#x27;&#x27;, Validators.required],
+      metaProofs: [&#x27;&#x27;, Validators.required],
+      seasonSpring: [false, Validators.required],
+      seasonSummer: [false, Validators.required],
+      seasonFall: [false, Validators.required],
+    })
   }
 
-  async getTitleText(): Promise&lt;string&gt; {
-    return element(by.css(&#x27;app-root .content span&#x27;)).getText();
+  get f() {
+    return this.courseMetadataForm?.controls
+  }
+
+  setFieldData(field: AbstractControl, fieldBool: AbstractControl, fieldValue: any): void {
+    fieldValue ? field.setValue(fieldValue) : &quot;&quot;
+    fieldValue ? fieldBool.setValue(&quot;true&quot;) : fieldBool.setValue(&quot;false&quot;)
+    fieldValue ? field.enable() : field.disable()
+    fieldBool.valueChanges.subscribe(val &#x3D;&gt; {val&#x3D;&#x3D;&quot;true&quot; ? field.enable() : field.disable()})
+  }
+
+  onSubmit(): void {
+    this.afs.collection(&#x27;Class&#x27;)
+        // .add(this.courseMetadataForm.value)
+        .add({
+          BookUsefulnessAvg: this.f.BookUsefulnessAvg.value,
+          BookUsefulnessCount: this.f.BookUsefulnessCount.value,
+          ClassName: this.f.ClassName.value,
+          CourseNumber: this.f.CourseNumber.value,
+          DifficultyAvg: this.f.DifficultyAvg.value,
+          DifficultyCount: this.f.DifficultyCount.value,
+          GraphicThumbnail: this.f.GraphicThumbnail.value,
+          GraphicColor: this.f.GraphicColor.value,
+          GraphicUrl: this.f.GraphicUrl.value,
+          LectureQualityAvg: this.f.LectureQualityAvg.value,
+          LectureQualityCount: this.f.LectureQualityCount.value,
+          PiazzaCommunityAvg: this.f.PiazzaCommunityAvg.value,
+          PiazzaCommunityCount: this.f.PiazzaCommunityCount.value,
+          ProfessorQualityAvg: this.f.ProfessorQualityAvg.value,
+          ProfessorQualityCount: this.f.ProfessorQualityCount.value,
+          RatingAvg: this.f.RatingAvg.value,
+          RatingCount: this.f.RatingCount.value,
+          Teacher: this.f.Teacher.value,
+          Textbook: this.f.Textbook.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+          TextbookName: this.f.TextbookName.value,
+          WorkloadAvg: this.f.WorkloadAvg.value,
+          WorkloadCount: this.f.WorkloadCount.value,
+          category: this.f.category.value,
+          computerScience: {
+            isComputerScience: this.f.csIsComputerScience.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+            category: this.f.csCategory.value,
+          },
+          dataScience: {
+            isDataScience: this.f.dsIsDataScience.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+            category: this.f.dsCategory.value,
+          },
+          languages: [],
+          meta: {
+            exams: this.f.metaExams.value,
+            homework: this.f.metaHomework.value, 
+            &quot;peer reviewed&quot;: this.f.metaPeerReviewed.value,
+            projects: this.f.metaProjects.value,
+            proofs: this.f.metaProofs.value,
+          },
+          season: {
+            spring: this.f.seasonSpring.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+            summer: this.f.seasonSummer.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+            fall: this.f.seasonFall.value &#x3D;&#x3D;&#x3D; &quot;true&quot; ? true : false,
+          },
+          semesters: {},
+        })
+        .then(result &#x3D;&gt; {
+          window.alert(&quot;Added! Reload the window to add another one.&quot;)
+          location.reload()
+        }, error &#x3D;&gt; {
+          console.error(&quot;Create Review: Submission failed -&quot;, error)
+          window.alert(&quot;Error! See the console for more.&quot;)
+        })
   }
 }
 </code></pre>
+        </div>
     </div>
-</div>
+
+
+
+
+
 
 
 
