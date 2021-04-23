@@ -687,6 +687,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> logoUrl</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>logoUrl:     <code>string</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> scale</b>
                         </td>
                     </tr>
@@ -716,6 +731,7 @@ import { ClassService } from &#x27;../services/classes/class.service&#x27;;
 })
 export class DashboardComponent {
   scale: number &#x3D; 7
+  logoUrl: string &#x3D; this.courseService.website &#x3D;&#x3D;&#x3D; &quot;computerScience&quot; ? &quot;assets/images/logos/Colorwheel/TheHubMSCS-128.png&quot; : &quot;assets/images/logos/Colorwheel/TheHubMSDS-128.png&quot;
 
   constructor(
     public courseService: ClassService

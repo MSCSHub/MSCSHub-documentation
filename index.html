@@ -584,20 +584,55 @@
                </div>
                <div class="content readme">
                    <div class="content-data">
-<h1 id="utmscs">Utmscs</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 11.0.5.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+<h1 id="mscs-hub-msds-hub">MSCS Hub + MSDS Hub</h1>
+<!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
+<p><img src="https://img.shields.io/github/repo-size/MSCSHub/MSCSHub" alt="GitHub repo size" class="img-responsive"><br><img src="https://img.shields.io/github/contributors/MSCSHub/MSCSHub" alt="GitHub contributors" class="img-responsive"><br><img src="https://img.shields.io/github/stars/MSCSHub/MSCSHub" alt="GitHub stars" class="img-responsive"><br><img src="https://img.shields.io/github/forks/MSCSHub/MSCSHub" alt="GitHub forks" class="img-responsive"><br><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FMSCSHub%2FMSCSHub" alt="Twitter Follow" class="img-responsive"></p>
+<p>The Hub is a website that allows students in UT&#39;s MSCS and MSDS to review courses and connect to student-run communities.</p>
+<p>Computer Science - <a href="https://mscshub.com">MSCSHub.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Science - <a href="https://msdshub.com">MSDSHub.com</a></p>
+<p>Each website is tailored to the indivual program but is all run using the same frontend and backend codebase. The entire frontend is built using Angular v11. The backend is serverless and runs off of firebase with node.js functions.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure you have met the following requirements:<br><!--- These are just example requirements. Add, duplicate or remove as required ---></p>
+<ul>
+<li>You have installed the latest version of <code>Node.js</code></li>
+<li>You have a computer capable of running web applications. This project has been tested on Windows, Mac, and Linux.</li>
+<li>You are familiar with general web development techniques and technologies.</li>
+</ul>
+<h2 id="installing-mscs-hub">Installing MSCS Hub</h2>
+<p>To install <code>MSCSHub</code>, follow these steps:</p>
+<pre><code class="hljs undefined">git clone https://github.com/MSCSHub/MSCSHub.git<br>cd MSCSHub<br>npm install<br>ng serve</code></pre><h2 id="using-mscs-hub">Using MSCS Hub</h2>
+<h3 id="local-development">Local Development</h3>
+<p>After running <code>ng serve</code> you will have a local version of <code>MSCSHub.com</code> running on your machine. Open your favorite browser and navigate to <a href="http://localhost:4200">localhost:4200</a> to begin</p>
+<h3 id="deploying-to-mscshub-com-and-msdshub-com">Deploying to MSCSHub.com and MSDSHub.com</h3>
+<p>Use the command <code>npm run deploy</code> to run the deployment script that will update both MSCSHub.com and MSDSHub.com. If you want to see more about what&#39;s happening behind the scenes when you run this command, take a look at the <code>scripts</code> section of <code>package.json</code>.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation for MSCSHub.com is hosted at <a href="https://mscshub.github.io/MSCSHub-documentation/">https://mscshub.github.io/MSCSHub-documentation/</a>. This is generated automatically using <code>compodoc</code>. It works by automatically parsing the files in the codebase and uses the inline comments to create a fully functional website for documentation.</p>
+<h2 id="contributing-to-the-hub">Contributing to The Hub</h2>
+<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
+<p>To contribute to MSCSHub, follow these steps:</p>
+<ol>
+<li>Create an issue on the repo <a href="https://github.com/MSCSHub/MSCSHub/issues">https://github.com/MSCSHub/MSCSHub/issues</a></li>
+<li>Assign yourself (or someone else) to the new issue.</li>
+<li>Branch Bot will automatically create a new branch</li>
+<li>On your local machine, switch to the new branch: <code>git checkout -b &lt;branch_name&gt;</code>.</li>
+<li>Make your changes and commit them: <code>git commit -m &#39;&lt;commit_message&gt;&#39;</code></li>
+<li>Push to the original branch: <code>git push origin &lt;project_name&gt;/&lt;location&gt;</code></li>
+<li>Create the pull request.</li>
+</ol>
+<p>Alternatively see the GitHub documentation on <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">creating a pull request</a>.</p>
+<h2 id="contributors">Contributors</h2>
+<p>Thanks to the following people who have contributed to this project:</p>
+<ul>
+<li><a href="https://github.com/EricPryzant">@EricPryzant</a> 💻</li>
+<li><a href="https://github.com/estraw1059">@estraw1059</a> 📦</li>
+<li>All of the #koolkidz that helped beta test this</li>
+<li>All of the students that have created reviews</li>
+</ul>
+<p>You might want to consider using something like the <a href="https://github.com/all-contributors/all-contributors">All Contributors</a> specification and its <a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>.</p>
+<h2 id="contact">Contact</h2>
+<p>If you want to contact the owners of this repo you can reach us at <a href="mailto:&#x6d;&#115;&#99;&#115;&#x68;&#117;&#98;&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x6d;&#115;&#99;&#115;&#x68;&#117;&#98;&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a>.</p>
+<h2 id="license">License</h2>
+<!--- If you're not sure which open license to use see https://choosealicense.com/--->
+<p>This project uses the following license: <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a>.</p>
 
 
 

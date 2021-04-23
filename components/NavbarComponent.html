@@ -811,6 +811,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> logoUrl</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>logoUrl:     <code>string</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> menuStatus</b>
                         </td>
                     </tr>
@@ -950,6 +965,7 @@ export class NavbarComponent implements OnInit {
   public currentUrl: string &#x3D; &#x27;&#x27;
   menuStatus &#x3D; false
   public readonly website: string &#x3D; environment.website
+  logoUrl: string &#x3D; this.website &#x3D;&#x3D;&#x3D; &quot;computerScience&quot; ? &quot;assets/images/logos/Colorwheel/Colorwheel-40-bcs.png&quot; : &quot;assets/images/logos/Colorwheel/TheHubMSDS-128.png&quot;
   public readonly degreeName: string &#x3D; this.website &#x3D;&#x3D;&#x3D; &quot;computerScience&quot; ? &quot;Computer Science&quot; : &quot;Data Science&quot;
   public readonly websiteName: string &#x3D; this.website &#x3D;&#x3D;&#x3D; &quot;computerScience&quot; ? &quot;MSCSHub&quot; : &quot;MSDSHub&quot;
   public readonly properName: string &#x3D; this.website &#x3D;&#x3D;&#x3D; &quot;computerScience&quot; ? &quot;MSCSO&quot; : &quot;MSDSO&quot;
