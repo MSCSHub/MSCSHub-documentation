@@ -630,41 +630,41 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre><code class="hljs javascript">import { ModuleWithProviders, NgModule} from &quot;@angular/core&quot;;
 import { MAT_DATE_LOCALE } from &#x27;@angular/material/core&#x27;;
-// import { MatNativeDateModule } from &#x27;@angular/material/core&#x27;;
+import { MatNativeDateModule } from &#x27;@angular/material/core&#x27;; // Don&#x27;t need
 import { MatIconRegistry } from &#x27;@angular/material/icon&#x27;;
 import { MatAutocompleteModule } from &#x27;@angular/material/autocomplete&#x27;;
-// import { MatBadgeModule } from &#x27;@angular/material/badge&#x27;;
+import { MatBadgeModule } from &#x27;@angular/material/badge&#x27;; // Don&#x27;t need
 import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatButtonToggleModule } from &#x27;@angular/material/button-toggle&#x27;;
 import { MatCardModule } from &#x27;@angular/material/card&#x27;;
-// import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
+import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;; // Don&#x27;t need
 import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
-// import { MatStepperModule } from &#x27;@angular/material/stepper&#x27;;
-// import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;;
+import { MatStepperModule } from &#x27;@angular/material/stepper&#x27;; // Don&#x27;t need
+import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;; // Don&#x27;t need
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
-// import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
+import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;; // Don&#x27;t need
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
-// import { MatGridListModule } from &#x27;@angular/material/grid-list&#x27;;
+import { MatGridListModule } from &#x27;@angular/material/grid-list&#x27;; // Don&#x27;t need
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { MatListModule } from &#x27;@angular/material/list&#x27;;
-// import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
-// import { MatPaginatorModule } from &#x27;@angular/material/paginator&#x27;;
-// import { MatProgressBarModule } from &#x27;@angular/material/progress-bar&#x27;;
-// import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
+import { MatMenuModule } from &#x27;@angular/material/menu&#x27;; // Don&#x27;t need
+import { MatPaginatorModule } from &#x27;@angular/material/paginator&#x27;; // Don&#x27;t need
+import { MatProgressBarModule } from &#x27;@angular/material/progress-bar&#x27;; // Don&#x27;t need
+import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;; // Don&#x27;t need
 import { MatRadioModule } from &#x27;@angular/material/radio&#x27;;
-// import { MatRippleModule } from &#x27;@angular/material/core&#x27;;
+import { MatRippleModule } from &#x27;@angular/material/core&#x27;; // Don&#x27;t need
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
-// import { MatSliderModule } from &#x27;@angular/material/slider&#x27;;
-// import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;;
+import { MatSliderModule } from &#x27;@angular/material/slider&#x27;; // Don&#x27;t need
+import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;; // Don&#x27;t need
 import { MatSnackBarModule } from &#x27;@angular/material/snack-bar&#x27;;
 import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-// import { MatTabsModule } from &#x27;@angular/material/tabs&#x27;;
+import { MatTabsModule } from &#x27;@angular/material/tabs&#x27;; // Don&#x27;t need
 import { MatToolbarModule } from &#x27;@angular/material/toolbar&#x27;;
 import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
-// import { MatTreeModule } from &#x27;@angular/material/tree&#x27;;
+import { MatTreeModule } from &#x27;@angular/material/tree&#x27;; // Don&#x27;t need
 import { CustomIconRegistry, SVG_ICONS } from &#x27;../shared/custom-icons/custom-icon-registry&#x27;;
 
 
@@ -813,21 +813,10 @@ export const svgIconProviders &#x3D; [
         &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 90 90&quot; width&#x3D;&quot;24&quot; height&#x3D;&quot;24&quot;&gt;
           &lt;defs&gt;
             &lt;style&gt;
-              .cls-1 {
-                fill: #7ba60d;
-              }
-
-              .cls-2 {
-                fill: #9cc925;
-              }
-
-              .cls-3 {
-                fill: #ffa400;
-              }
-
-              .cls-4 {
-                fill: #ffd900;
-              }
+              .cls-1 {fill: #7ba60d;}
+              .cls-2 {fill: #9cc925;}
+              .cls-3 {fill: #ffa400;}
+              .cls-4 {fill: #ffd900;}
             &lt;/style&gt;
           &lt;/defs&gt;
           &lt;title&gt;orange-flower&lt;/title&gt;
@@ -899,80 +888,79 @@ export const svgIconProviders &#x3D; [
       multi: true
     }
   ];
-  // tslint:enable: max-line-length
 
 @NgModule({
     imports: [
         MatAutocompleteModule,
-        // MatBadgeModule,
+        MatBadgeModule, // Don&#x27;t need
         MatButtonModule,
         MatButtonToggleModule,
         MatCardModule,
-        // MatCheckboxModule,
+        MatCheckboxModule, // Don&#x27;t need
         MatChipsModule,
-        // MatStepperModule,
-        // MatDatepickerModule,
+        MatStepperModule, // Don&#x27;t need
+        MatDatepickerModule, // Don&#x27;t need
         MatDialogModule,
-        // MatExpansionModule,
+        MatExpansionModule, // Don&#x27;t need
         MatFormFieldModule,
-        // MatGridListModule,
+        MatGridListModule, // Don&#x27;t need
         MatIconModule,
         MatInputModule,
         MatListModule,
-        // MatMenuModule,
-        // MatPaginatorModule,
-        // MatProgressBarModule,
-        // MatProgressSpinnerModule,
+        MatMenuModule, // Don&#x27;t need
+        MatPaginatorModule, // Don&#x27;t need
+        MatProgressBarModule, // Don&#x27;t need
+        MatProgressSpinnerModule, // Don&#x27;t need
         MatRadioModule,
-        // MatRippleModule,
+        MatRippleModule, // Don&#x27;t need
         MatSelectModule,
         MatSidenavModule,
-        // MatSliderModule,
-        // MatSlideToggleModule,
+        MatSliderModule, // Don&#x27;t need
+        MatSlideToggleModule, // Don&#x27;t need
         MatSnackBarModule,
         MatSortModule,
         MatTableModule,
-        // MatTabsModule,
+        MatTabsModule, // Don&#x27;t need
         MatToolbarModule,
         MatTooltipModule,
-        // MatTreeModule,
-        // MatNativeDateModule
+        MatTreeModule, // Don&#x27;t need
+        MatNativeDateModule // Don&#x27;t need
     ],
     exports: [
         MatAutocompleteModule,
-        // MatBadgeModule, //
+        MatBadgeModule, // Don&#x27;t need
         MatButtonModule,
         MatButtonToggleModule,
         MatCardModule,
-        // MatCheckboxModule, //
+        MatCheckboxModule, // Don&#x27;t need
         MatChipsModule,
-        // MatStepperModule, //
-        // MatDatepickerModule, //
+        MatStepperModule, // Don&#x27;t need
+        MatDatepickerModule, // Don&#x27;t need
         MatDialogModule,
-        // MatExpansionModule, //
-        MatFormFieldModule, //
-        // MatGridListModule, //
+        MatExpansionModule, // Don&#x27;t need
+        MatFormFieldModule, // Don&#x27;t need?
+        MatGridListModule, // Don&#x27;t need
         MatIconModule,
         MatInputModule,
         MatListModule,
-        // MatMenuModule, //
-        // MatPaginatorModule, //
-        // MatProgressBarModule, //
-        // MatProgressSpinnerModule, //
+        MatMenuModule, // Don&#x27;t need
+        MatPaginatorModule, // Don&#x27;t need
+        MatProgressBarModule, // Don&#x27;t need
+        MatProgressSpinnerModule, // Don&#x27;t need
         MatRadioModule,
-        // MatRippleModule, //
+        MatRippleModule, // Don&#x27;t need
         MatSelectModule,
         MatSidenavModule,
-        // MatSliderModule, //
-        // MatSlideToggleModule, //
+        MatSliderModule, // Don&#x27;t need
+        MatSlideToggleModule, // Don&#x27;t need
         MatSnackBarModule,
         MatSortModule,
         MatTableModule,
-        // MatTabsModule, //
+        MatTabsModule, // Don&#x27;t need
         MatToolbarModule,
         MatTooltipModule,
-        // MatTreeModule, //
-        // MatNativeDateModule //
+        MatTreeModule, // Don&#x27;t need
+        MatNativeDateModule // Don&#x27;t need
     ],
     providers: [     
         { provide: MatIconRegistry, useClass: CustomIconRegistry },
